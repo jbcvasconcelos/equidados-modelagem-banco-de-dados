@@ -116,6 +116,18 @@ CONSULTAS = {
     },
 }
 
+TABELAS_CONSULTAVEIS = {
+    "Unidades de saúde (CNES)": ("unidades_saude", "cnes"),
+    "Equipes de saúde": ("equipes_saude", "codigo_equipe"),
+    "Censo de raça/cor (IBGE)": ("censo_raca_cor", "raca_cor"),
+    "Censo de deficiência (IBGE)": ("censo_deficiencia", "tipo_dificuldade"),
+    "Atendimentos simulados": ("mock_pec_atendimentos", "id_atendimento"),
+    "Referência simulada por distrito": (
+        "mock_populacao_negra_distrito",
+        "distrito_sanitario_codigo",
+    ),
+}
+
 RACAS_COR = ["Branca", "Preta", "Parda", "Amarela", "Indígena"]
 TIPOS_DEFICIENCIA = [
     "Nenhuma",
@@ -129,6 +141,26 @@ TIPOS_DEFICIENCIA = [
 SIM_NAO = ["Sim", "Não"]
 DISTRITOS = [f"{numero:02d}" for numero in range(1, 9)]
 NAO_INFORMADO = "Não informado"
+
+
+def montar_sql_consulta_tabela(tabela, limite, deslocamento):
+    if tabela not in {valor[0] for valor in TABELAS_CONSULTAVEIS.values()}:
+        raise ValueError("A tabela selecionada não está na lista permitida.")
+    if not 1 <= limite <= 500:
+        raise ValueError("O limite deve estar entre 1 e 500.")
+    if deslocamento < 0:
+        raise ValueError("O deslocamento não pode ser negativo.")
+
+    chave_primaria = next(
+        chave
+        for nome, chave in TABELAS_CONSULTAVEIS.values()
+        if nome == tabela
+    )
+    return (
+        f'SELECT * FROM "{tabela}" '
+        f'ORDER BY "{chave_primaria}" '
+        "LIMIT :limite OFFSET :deslocamento"
+    )
 
 
 def inserir_atendimento(engine, dados):
@@ -557,54 +589,111 @@ def _renderizar_crud_referencias(consultar, engine):
 
 
 def _renderizar_consultas(consultar):
-    st.caption(
-        "Quatro consultas SQL predefinidas, incluindo junções entre tabelas. "
-        "Os resultados podem ser visualizados em tabela e gráfico."
+    consultas_tab, tabelas_tab = st.tabs(
+        ["Consultas analíticas", "Consultar tabela do banco"]
     )
-    consulta_selecionada = st.selectbox(
-        "Consulta", list(CONSULTAS), key="consulta_sql_equidados",
-    )
-    definicao = CONSULTAS[consulta_selecionada]
-    st.code(definicao["sql"].strip(), language="sql")
-    resultado = consultar(definicao["sql"])
-    if resultado.empty:
-        st.info("A consulta não retornou resultados.")
-        return
-
-    for coluna in definicao["colunas_numericas"]:
-        resultado[coluna] = pd.to_numeric(resultado[coluna], errors="coerce")
-    st.dataframe(resultado, width="stretch", hide_index=True)
-    categoricas = resultado.select_dtypes(exclude="number").columns.tolist()
-    numericas = resultado.select_dtypes(include="number").columns.tolist()
-    if not categoricas or not numericas:
-        st.info("O resultado não contém colunas suficientes para gerar um gráfico.")
-        return
-
-    coluna_x = st.selectbox(
-        "Categoria do gráfico", categoricas,
-        key=f"grafico_consulta_x_{consulta_selecionada}",
-    )
-    coluna_y = st.selectbox(
-        "Indicador do gráfico", numericas,
-        key=f"grafico_consulta_y_{consulta_selecionada}",
-    )
-    if definicao["tipo_grafico"] == "line":
-        figura = px.line(
-            resultado, x=coluna_x, y=coluna_y, markers=True,
-            labels={coluna_x: coluna_x, coluna_y: coluna_y},
+    with consultas_tab:
+        st.caption(
+            "Quatro consultas SQL predefinidas, incluindo junções entre "
+            "tabelas. Os resultados podem ser visualizados em tabela e gráfico."
         )
-    else:
-        figura = px.bar(
-            resultado, x=coluna_x, y=coluna_y, color=(
-                "raca_cor" if "raca_cor" in resultado.columns else None
-            ),
-            labels={coluna_x: coluna_x, coluna_y: coluna_y},
+        consulta_selecionada = st.selectbox(
+            "Consulta", list(CONSULTAS), key="consulta_sql_equidados",
         )
-    figura.update_layout(
-        template="plotly_white",
-        margin={"l": 10, "r": 10, "t": 30, "b": 10},
-    )
-    st.plotly_chart(figura, width="stretch")
+        definicao = CONSULTAS[consulta_selecionada]
+        st.code(definicao["sql"].strip(), language="sql")
+        resultado = consultar(definicao["sql"])
+        if resultado.empty:
+            st.info("A consulta não retornou resultados.")
+        else:
+            for coluna in definicao["colunas_numericas"]:
+                resultado[coluna] = pd.to_numeric(
+                    resultado[coluna], errors="coerce"
+                )
+            st.dataframe(resultado, width="stretch", hide_index=True)
+            categoricas = resultado.select_dtypes(
+                exclude="number"
+            ).columns.tolist()
+            numericas = resultado.select_dtypes(
+                include="number"
+            ).columns.tolist()
+            if not categoricas or not numericas:
+                st.info(
+                    "O resultado não contém colunas suficientes para gerar "
+                    "um gráfico."
+                )
+            else:
+                coluna_x = st.selectbox(
+                    "Categoria do gráfico", categoricas,
+                    key=f"grafico_consulta_x_{consulta_selecionada}",
+                )
+                coluna_y = st.selectbox(
+                    "Indicador do gráfico", numericas,
+                    key=f"grafico_consulta_y_{consulta_selecionada}",
+                )
+                if definicao["tipo_grafico"] == "line":
+                    figura = px.line(
+                        resultado, x=coluna_x, y=coluna_y, markers=True,
+                        labels={coluna_x: coluna_x, coluna_y: coluna_y},
+                    )
+                else:
+                    figura = px.bar(
+                        resultado, x=coluna_x, y=coluna_y, color=(
+                            "raca_cor" if "raca_cor" in resultado.columns else None
+                        ),
+                        labels={coluna_x: coluna_x, coluna_y: coluna_y},
+                    )
+                figura.update_layout(
+                    template="plotly_white",
+                    margin={"l": 10, "r": 10, "t": 30, "b": 10},
+                )
+                st.plotly_chart(figura, width="stretch")
+
+    with tabelas_tab:
+        st.caption(
+            "Selecione uma tabela para consultar seus registros. Tabelas "
+            "simuladas são identificadas no nome; as demais são fontes CNES/IBGE."
+        )
+        tabela_selecionada = st.selectbox(
+            "Tabela do banco",
+            list(TABELAS_CONSULTAVEIS),
+            key="tabela_sql_equidados",
+        )
+        tabela, _ = TABELAS_CONSULTAVEIS[tabela_selecionada]
+        quantidade = st.selectbox(
+            "Registros por página",
+            [25, 50, 100, 250, 500],
+            index=2,
+            key=f"limite_tabela_{tabela}",
+        )
+        total = consultar(
+            f'SELECT COUNT(*) AS total FROM "{tabela}"'
+        ).iloc[0]["total"]
+        total = int(total)
+        total_paginas = max(1, (total + quantidade - 1) // quantidade)
+        pagina = st.number_input(
+            f"Página (1 a {total_paginas})",
+            min_value=1,
+            max_value=total_paginas,
+            value=1,
+            step=1,
+            key=f"pagina_tabela_{tabela}",
+        )
+        consulta_sql = montar_sql_consulta_tabela(
+            tabela,
+            quantidade,
+            (int(pagina) - 1) * quantidade,
+        )
+        st.code(consulta_sql, language="sql")
+        st.caption(f"{total:,} registro(s) encontrados.".replace(",", "."))
+        registros = consultar(
+            consulta_sql,
+            {"limite": quantidade, "deslocamento": (int(pagina) - 1) * quantidade},
+        )
+        if registros.empty:
+            st.info("A tabela não contém registros.")
+        else:
+            st.dataframe(registros, width="stretch", hide_index=True)
 
 
 def pagina_dados(consultar, obter_engine):
