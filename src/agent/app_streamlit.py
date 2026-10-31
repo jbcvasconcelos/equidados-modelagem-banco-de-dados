@@ -1,23 +1,10 @@
-import streamlit as st
+"""Compatibilidade: encaminha o comando antigo para a interface integrada."""
 
-from assistente import responder_pergunta
+import runpy
+from pathlib import Path
 
-st.set_page_config(page_title="Assistente de Dados - Equidade em Saúde", page_icon="🩺")
-
-st.title("Assistente de Dados — Equidade em Saúde (Recife)")
-st.caption(
-    "Faça uma pergunta sobre unidades de saúde, equipes, distritos sanitários, "
-    "raça/cor ou deficiência. Uma pergunta por vez."
+APP_INTEGRADA = (
+    Path(__file__).resolve().parents[1] / "dashboard" / "app_dashboard.py"
 )
 
-pergunta = st.text_input("Sua pergunta:")
-
-if st.button("Perguntar") and pergunta:
-    with st.spinner("Consultando os dados..."):
-        try:
-            resposta = responder_pergunta(pergunta)
-            st.success(resposta)
-        except ValueError as erro:
-            st.error(str(erro))
-        except Exception as erro:
-            st.error(f"Não foi possível responder essa pergunta: {erro}")
+runpy.run_path(str(APP_INTEGRADA), run_name="__main__")

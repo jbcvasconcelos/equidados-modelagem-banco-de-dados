@@ -9,6 +9,9 @@ MONGO_URI = os.getenv("MONGO_URI")
 
 
 def testar_conexao():
+    if not MONGO_URI:
+        raise SystemExit("Configure MONGO_URI no arquivo .env para acessar o MongoDB.")
+
     cliente = MongoClient(MONGO_URI)
     cliente.admin.command("ping")
     print("Conexão com o MongoDB Atlas funcionou!")

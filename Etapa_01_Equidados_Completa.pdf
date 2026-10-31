@@ -1,0 +1,755 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [6 0 R 8 0 R 10 0 R 12 0 R 14 0 R 16 0 R] /Count 6 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+5 0 obj
+<< /Length 4682 >>
+stream
+0.150 0.380 0.550 rg BT /F2 8 Tf 1 0 0 1 24.0 566.0 Tm (EQUidados | ETAPA 01) Tj ET
+0.090 0.240 0.380 rg BT /F2 17 Tf 1 0 0 1 24.0 544.0 Tm (1. Definicao do minimundo / cenario) Tj ET
+0.340 0.400 0.450 rg BT /F1 8 Tf 1 0 0 1 24.0 527.0 Tm (Integracao de dados e apoio a gestao da Atencao Basica do Recife) Tj ET
+0.720 0.790 0.840 RG 0.5 w 24 517 m 818 517 l S
+0.420 0.470 0.510 rg BT /F1 6.6 Tf 1 0 0 1 24.0 15.0 Tm (Equidados - Equidade em Saude | Recife) Tj ET
+0.420 0.470 0.510 rg BT /F1 6.6 Tf 1 0 0 1 798.0 15.0 Tm (1) Tj ET
+0.120 0.340 0.490 rg BT /F2 10 Tf 1 0 0 1 24.0 494.0 Tm (Contexto e objetivo) Tj ET
+0.120 0.180 0.250 rg BT /F1 8.1 Tf 1 0 0 1 27.0 477.0 Tm (O Equidados e um projeto de integracao e analise de dados para apoiar a gestao da Atencao Basica do Recife. Seu objetivo e organizar) Tj ET
+0.120 0.180 0.250 rg BT /F1 8.1 Tf 1 0 0 1 27.0 466.0 Tm (informacoes territoriais e dados de atendimentos para produzir indicadores relacionados a saude da populacao LGBTQIAPN+, a saude da pessoa) Tj ET
+0.120 0.180 0.250 rg BT /F1 8.1 Tf 1 0 0 1 27.0 455.0 Tm (com deficiencia e a saude da populacao negra.) Tj ET
+0.120 0.180 0.250 rg BT /F1 8.1 Tf 1 0 0 1 27.0 438.0 Tm (O sistema reune dados publicos do CNES, do IBGE e do Portal de Dados Abertos do Recife. O CNES descreve unidades de saude e equipes,) Tj ET
+0.120 0.180 0.250 rg BT /F1 8.1 Tf 1 0 0 1 27.0 427.0 Tm (incluindo a relacao entre equipe e unidade. O Censo do IBGE fornece referencias populacionais por raca/cor e deficiencia. Os dados) Tj ET
+0.120 0.180 0.250 rg BT /F1 8.1 Tf 1 0 0 1 27.0 416.0 Tm (territoriais descrevem bairros e distritos sanitarios e apoiam a visualizacao geografica.) Tj ET
+0.120 0.340 0.490 rg BT /F2 10 Tf 1 0 0 1 24.0 396.0 Tm (Atendimentos e atributos) Tj ET
+0.120 0.180 0.250 rg BT /F1 8.1 Tf 1 0 0 1 27.0 379.0 Tm (O projeto preve a analise de atendimentos do PEC/e-SUS APS. Como o acesso aos dados reais ainda nao foi liberado, os atendimentos) Tj ET
+0.120 0.180 0.250 rg BT /F1 8.1 Tf 1 0 0 1 27.0 368.0 Tm (utilizados atualmente sao ficticios e simulados. Servem para testar indicadores, mapas e analises e nao representam pacientes nem) Tj ET
+0.120 0.180 0.250 rg BT /F1 8.1 Tf 1 0 0 1 27.0 357.0 Tm (atendimentos reais.) Tj ET
+0.120 0.180 0.250 rg BT /F1 8.1 Tf 1 0 0 1 27.0 340.0 Tm (Cada registro simulado pode conter data e tipo do atendimento, tipo de profissional, idade, raca/cor, informacao sobre deficiencia,) Tj ET
+0.120 0.180 0.250 rg BT /F1 8.1 Tf 1 0 0 1 27.0 329.0 Tm (orientacao sexual e identidade de genero. Os registros sao associados a equipes e unidades de saude e podem conter o codigo do distrito) Tj ET
+0.120 0.180 0.250 rg BT /F1 8.1 Tf 1 0 0 1 27.0 318.0 Tm (sanitario.) Tj ET
+0.120 0.180 0.250 rg BT /F1 8.1 Tf 1 0 0 1 27.0 301.0 Tm (A coleta simulada de orientacao sexual e identidade de genero considera primeiro se a pessoa deseja informar. A categoria e registrada) Tj ET
+0.120 0.180 0.250 rg BT /F1 8.1 Tf 1 0 0 1 27.0 290.0 Tm (quando a resposta e afirmativa. O gerador representa campos nao preenchidos e exclui criancas menores de 10 anos da analise LGBTQIAPN+,) Tj ET
+0.120 0.180 0.250 rg BT /F1 8.1 Tf 1 0 0 1 27.0 279.0 Tm (conforme a regra do projeto.) Tj ET
+0.120 0.340 0.490 rg BT /F2 10 Tf 1 0 0 1 24.0 259.0 Tm (Territorio, fluxo e ressalvas) Tj ET
+0.120 0.180 0.250 rg BT /F1 8.1 Tf 1 0 0 1 27.0 242.0 Tm (O projeto possui uma referencia de percentual esperado da populacao negra por distrito sanitario. Essa distribuicao e ilustrativa e) Tj ET
+0.120 0.180 0.250 rg BT /F1 8.1 Tf 1 0 0 1 27.0 231.0 Tm (simulada; nao representa a distribuicao real da populacao do Recife. E usada para demonstrar comparacoes territoriais com os atendimentos) Tj ET
+0.120 0.180 0.250 rg BT /F1 8.1 Tf 1 0 0 1 27.0 220.0 Tm (simulados.) Tj ET
+0.120 0.180 0.250 rg BT /F1 8.1 Tf 1 0 0 1 27.0 203.0 Tm (O fluxo organiza os dados em camadas: dados publicos e simulados sao armazenados na camada bronze, transformados em tabelas relacionais na) Tj ET
+0.120 0.180 0.250 rg BT /F1 8.1 Tf 1 0 0 1 27.0 192.0 Tm (camada silver e consumidos por um dashboard e por um agente de perguntas em linguagem natural. Quando autorizado o acesso ao PEC real, os) Tj ET
+0.120 0.180 0.250 rg BT /F1 8.1 Tf 1 0 0 1 27.0 181.0 Tm (dados reais poderao substituir os simulados.) Tj ET
+0.120 0.180 0.250 rg BT /F1 8.1 Tf 1 0 0 1 27.0 164.0 Tm (Unidades, equipes e dados do Censo derivam de fontes publicas; atendimentos e percentuais esperados por distrito sao simulados. As) Tj ET
+0.120 0.180 0.250 rg BT /F1 8.1 Tf 1 0 0 1 27.0 153.0 Tm (categorias de deficiencia do Censo podem se sobrepor e nao devem ser somadas; a tabela preserva o indicador do total oficial.) Tj ET
+endstream
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 842 595] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 5 0 R >>
+endobj
+7 0 obj
+<< /Length 5422 >>
+stream
+0.150 0.380 0.550 rg BT /F2 8 Tf 1 0 0 1 24.0 566.0 Tm (EQUidados | ETAPA 01) Tj ET
+0.090 0.240 0.380 rg BT /F2 17 Tf 1 0 0 1 24.0 544.0 Tm (2. Esquema conceitual) Tj ET
+0.340 0.400 0.450 rg BT /F1 8 Tf 1 0 0 1 24.0 527.0 Tm (Entidades, atributos principais e relacionamentos \(representacao para brModelo\)) Tj ET
+0.720 0.790 0.840 RG 0.5 w 24 517 m 818 517 l S
+0.420 0.470 0.510 rg BT /F1 6.6 Tf 1 0 0 1 24.0 15.0 Tm (Equidados - Equidade em Saude | Recife) Tj ET
+0.420 0.470 0.510 rg BT /F1 6.6 Tf 1 0 0 1 798.0 15.0 Tm (2) Tj ET
+0.160 0.430 0.640 RG 1.3 w 270 440 m 310 440 l S
+0.160 0.430 0.640 rg BT /F2 7 Tf 1 0 0 1 272.0 450.0 Tm (1) Tj ET
+0.160 0.430 0.640 rg BT /F2 7 Tf 1 0 0 1 299.0 450.0 Tm (N) Tj ET
+0.160 0.430 0.640 RG 1.3 w 145 333 m 145 300 l S
+0.160 0.430 0.640 rg BT /F2 7 Tf 1 0 0 1 151.0 323.0 Tm (1) Tj ET
+0.160 0.430 0.640 rg BT /F2 7 Tf 1 0 0 1 151.0 306.0 Tm (N) Tj ET
+0.160 0.430 0.640 RG 1.3 w 433 333 m 433 300 l S
+0.160 0.430 0.640 rg BT /F2 7 Tf 1 0 0 1 439.0 323.0 Tm (1) Tj ET
+0.160 0.430 0.640 rg BT /F2 7 Tf 1 0 0 1 439.0 306.0 Tm (N) Tj ET
+0.980 0.990 1.000 rg 0.600 0.690 0.760 RG 0.8 w 24 333 246 190 re B
+0.100 0.310 0.490 rg 0.100 0.310 0.490 RG 0.4 w 24 501 246 22 re B
+1.000 1.000 1.000 rg BT /F2 8.5 Tf 1 0 0 1 32.0 508.0 Tm (UNIDADE DE SAUDE) Tj ET
+0.120 0.180 0.250 rg BT /F1 7.1 Tf 1 0 0 1 32.0 487.0 Tm (cnes \(identificador\)) Tj ET
+0.120 0.180 0.250 rg BT /F1 7.1 Tf 1 0 0 1 32.0 473.0 Tm (nome fantasia; nome empresarial) Tj ET
+0.120 0.180 0.250 rg BT /F1 7.1 Tf 1 0 0 1 32.0 459.0 Tm (bairro; distrito sanitario) Tj ET
+0.120 0.180 0.250 rg BT /F1 7.1 Tf 1 0 0 1 32.0 445.0 Tm (endereco; CEP; latitude; longitude) Tj ET
+0.120 0.180 0.250 rg BT /F1 7.1 Tf 1 0 0 1 32.0 431.0 Tm (tipo de estabelecimento) Tj ET
+0.980 0.990 1.000 rg 0.600 0.690 0.760 RG 0.8 w 310 333 246 190 re B
+0.100 0.310 0.490 rg 0.100 0.310 0.490 RG 0.4 w 310 501 246 22 re B
+1.000 1.000 1.000 rg BT /F2 8.5 Tf 1 0 0 1 318.0 508.0 Tm (EQUIPE DE SAUDE) Tj ET
+0.120 0.180 0.250 rg BT /F1 7.1 Tf 1 0 0 1 318.0 487.0 Tm (codigo da equipe \(identificador\)) Tj ET
+0.120 0.180 0.250 rg BT /F1 7.1 Tf 1 0 0 1 318.0 473.0 Tm (nome e tipo da equipe) Tj ET
+0.120 0.180 0.250 rg BT /F1 7.1 Tf 1 0 0 1 318.0 459.0 Tm (data de ativacao; data de desativacao) Tj ET
+0.120 0.180 0.250 rg BT /F1 7.1 Tf 1 0 0 1 318.0 445.0 Tm (vinculada a uma unidade) Tj ET
+0.980 0.990 1.000 rg 0.600 0.690 0.760 RG 0.8 w 24 67 532 233 re B
+0.100 0.310 0.490 rg 0.100 0.310 0.490 RG 0.4 w 24 278 532 22 re B
+1.000 1.000 1.000 rg BT /F2 8.5 Tf 1 0 0 1 32.0 285.0 Tm (ATENDIMENTO) Tj ET
+1.000 0.910 0.720 rg BT /F2 5.7 Tf 1 0 0 1 466.0 285.0 Tm (DADOS SIMULADOS) Tj ET
+0.120 0.180 0.250 rg BT /F1 7.2 Tf 1 0 0 1 32.0 264.0 Tm (id do atendimento \(identificador\)) Tj ET
+0.120 0.180 0.250 rg BT /F1 7.2 Tf 1 0 0 1 32.0 247.0 Tm (data e tipo do atendimento) Tj ET
+0.120 0.180 0.250 rg BT /F1 7.2 Tf 1 0 0 1 32.0 230.0 Tm (tipo de profissional; idade) Tj ET
+0.120 0.180 0.250 rg BT /F1 7.2 Tf 1 0 0 1 32.0 213.0 Tm (raca/cor; tipo de deficiencia) Tj ET
+0.120 0.180 0.250 rg BT /F1 7.2 Tf 1 0 0 1 32.0 196.0 Tm (deseja informar?; orientacao sexual) Tj ET
+0.120 0.180 0.250 rg BT /F1 7.2 Tf 1 0 0 1 32.0 179.0 Tm (deseja informar?; identidade de genero) Tj ET
+0.120 0.180 0.250 rg BT /F1 7.2 Tf 1 0 0 1 32.0 162.0 Tm (nome social; distrito sanitario) Tj ET
+0.120 0.180 0.250 rg BT /F1 7.2 Tf 1 0 0 1 32.0 145.0 Tm (relacionado a equipe e unidade) Tj ET
+0.980 0.990 1.000 rg 0.600 0.690 0.760 RG 0.8 w 583 371 235 152 re B
+0.100 0.310 0.490 rg 0.100 0.310 0.490 RG 0.4 w 583 501 235 22 re B
+1.000 1.000 1.000 rg BT /F2 8.5 Tf 1 0 0 1 591.0 508.0 Tm (CENSO DE RACA/COR) Tj ET
+0.120 0.180 0.250 rg BT /F1 7.1 Tf 1 0 0 1 591.0 487.0 Tm (categoria de raca/cor) Tj ET
+0.120 0.180 0.250 rg BT /F1 7.1 Tf 1 0 0 1 591.0 468.0 Tm (populacao; ano) Tj ET
+0.120 0.180 0.250 rg BT /F1 7.1 Tf 1 0 0 1 591.0 449.0 Tm (Fonte: IBGE / Censo Demografico) Tj ET
+0.980 0.990 1.000 rg 0.600 0.690 0.760 RG 0.8 w 583 198 235 152 re B
+0.100 0.310 0.490 rg 0.100 0.310 0.490 RG 0.4 w 583 328 235 22 re B
+1.000 1.000 1.000 rg BT /F2 8.5 Tf 1 0 0 1 591.0 335.0 Tm (CENSO DE DEFICIENCIA) Tj ET
+0.120 0.180 0.250 rg BT /F1 7.1 Tf 1 0 0 1 591.0 314.0 Tm (tipo de dificuldade ou total) Tj ET
+0.120 0.180 0.250 rg BT /F1 7.1 Tf 1 0 0 1 591.0 296.0 Tm (populacao; ano) Tj ET
+0.120 0.180 0.250 rg BT /F1 7.1 Tf 1 0 0 1 591.0 278.0 Tm (indicador do total oficial) Tj ET
+0.120 0.180 0.250 rg BT /F1 7.1 Tf 1 0 0 1 591.0 260.0 Tm (Fonte: IBGE / Censo Demografico) Tj ET
+0.980 0.990 1.000 rg 0.600 0.690 0.760 RG 0.8 w 583 67 235 112 re B
+0.100 0.310 0.490 rg 0.100 0.310 0.490 RG 0.4 w 583 157 235 22 re B
+1.000 1.000 1.000 rg BT /F2 8.5 Tf 1 0 0 1 591.0 164.0 Tm (REFERENCIA NEGRA POR DISTRITO) Tj ET
+1.000 0.910 0.720 rg BT /F2 5.7 Tf 1 0 0 1 728.0 164.0 Tm (SIMULADA) Tj ET
+0.120 0.180 0.250 rg BT /F1 7.1 Tf 1 0 0 1 591.0 143.0 Tm (codigo do distrito) Tj ET
+0.120 0.180 0.250 rg BT /F1 7.1 Tf 1 0 0 1 591.0 126.0 Tm (percentual esperado ilustrativo) Tj ET
+0.370 0.420 0.460 rg BT /F1 6.7 Tf 1 0 0 1 583.0 353.0 Tm (Tabelas de apoio sem relacionamento por FK no DDL atual.) Tj ET
+0.120 0.340 0.490 rg BT /F2 7.2 Tf 1 0 0 1 24.0 45.0 Tm (Relacionamentos: Unidade 1:N Equipe; Unidade 1:N Atendimento; Equipe 1:N Atendimento.) Tj ET
+0.570 0.250 0.180 rg BT /F1 6.8 Tf 1 0 0 1 24.0 32.0 Tm (Atendimentos e percentual esperado por distrito sao simulados, nao sao dados reais.) Tj ET
+endstream
+endobj
+8 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 842 595] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 7 0 R >>
+endobj
+9 0 obj
+<< /Length 3505 >>
+stream
+0.150 0.380 0.550 rg BT /F2 8 Tf 1 0 0 1 24.0 566.0 Tm (EQUidados | ETAPA 01) Tj ET
+0.090 0.240 0.380 rg BT /F2 17 Tf 1 0 0 1 24.0 544.0 Tm (3. Esquema logico e 4. Esquema relacional) Tj ET
+0.340 0.400 0.450 rg BT /F1 8 Tf 1 0 0 1 24.0 527.0 Tm (PK = chave primaria | FK = chave estrangeira | Tipos conforme o DDL PostgreSQL do projeto) Tj ET
+0.720 0.790 0.840 RG 0.5 w 24 517 m 818 517 l S
+0.420 0.470 0.510 rg BT /F1 6.6 Tf 1 0 0 1 24.0 15.0 Tm (Equidados - Equidade em Saude | Recife) Tj ET
+0.420 0.470 0.510 rg BT /F1 6.6 Tf 1 0 0 1 798.0 15.0 Tm (3) Tj ET
+0.975 0.985 0.992 rg 0.700 0.770 0.820 RG 0.7 w 24 443 387 54 re B
+0.100 0.310 0.490 rg 0.100 0.310 0.490 RG 0.4 w 24 474 387 23 re B
+1.000 1.000 1.000 rg BT /F2 7.6 Tf 1 0 0 1 31.0 482.0 Tm (UNIDADES_SAUDE) Tj ET
+0.120 0.180 0.250 rg BT /F1 6.3 Tf 1 0 0 1 31.0 461.0 Tm (cnes PK, nome_fantasia, nome_empresarial, bairro, distrito_sanitario_codigo, distrito_sanitario_nome,) Tj ET
+0.120 0.180 0.250 rg BT /F1 6.3 Tf 1 0 0 1 31.0 451.0 Tm (endereco, cep, latitude, longitude, tipo_estabelecimento) Tj ET
+0.975 0.985 0.992 rg 0.700 0.770 0.820 RG 0.7 w 24 380 387 54 re B
+0.100 0.310 0.490 rg 0.100 0.310 0.490 RG 0.4 w 24 411 387 23 re B
+1.000 1.000 1.000 rg BT /F2 7.6 Tf 1 0 0 1 31.0 419.0 Tm (EQUIPES_SAUDE) Tj ET
+0.120 0.180 0.250 rg BT /F1 6.3 Tf 1 0 0 1 31.0 398.0 Tm (codigo_equipe PK, nome_equipe, tipo_equipe, cnes_unidade FK -> UNIDADES_SAUDE\(cnes\), data_ativacao,) Tj ET
+0.120 0.180 0.250 rg BT /F1 6.3 Tf 1 0 0 1 31.0 388.0 Tm (data_desativacao) Tj ET
+0.975 0.985 0.992 rg 0.700 0.770 0.820 RG 0.7 w 24 327 387 44 re B
+0.100 0.310 0.490 rg 0.100 0.310 0.490 RG 0.4 w 24 348 387 23 re B
+1.000 1.000 1.000 rg BT /F2 7.6 Tf 1 0 0 1 31.0 356.0 Tm (CENSO_RACA_COR) Tj ET
+0.120 0.180 0.250 rg BT /F1 6.3 Tf 1 0 0 1 31.0 335.0 Tm (raca_cor PK, populacao, ano) Tj ET
+0.975 0.985 0.992 rg 0.700 0.770 0.820 RG 0.7 w 24 274 387 44 re B
+0.100 0.310 0.490 rg 0.100 0.310 0.490 RG 0.4 w 24 295 387 23 re B
+1.000 1.000 1.000 rg BT /F2 7.6 Tf 1 0 0 1 31.0 303.0 Tm (CENSO_DEFICIENCIA) Tj ET
+0.120 0.180 0.250 rg BT /F1 6.3 Tf 1 0 0 1 31.0 282.0 Tm (tipo_dificuldade PK, populacao, ano, e_total) Tj ET
+0.975 0.985 0.992 rg 0.700 0.770 0.820 RG 0.7 w 431 423 387 74 re B
+0.100 0.310 0.490 rg 0.100 0.310 0.490 RG 0.4 w 431 474 387 23 re B
+1.000 1.000 1.000 rg BT /F2 7.6 Tf 1 0 0 1 438.0 482.0 Tm (MOCK_PEC_ATENDIMENTOS) Tj ET
+0.120 0.180 0.250 rg BT /F1 6.3 Tf 1 0 0 1 438.0 461.0 Tm (id_atendimento PK, codigo_equipe FK -> EQUIPES_SAUDE\(codigo_equipe\), cnes_unidade FK ->) Tj ET
+0.120 0.180 0.250 rg BT /F1 6.3 Tf 1 0 0 1 438.0 451.0 Tm (UNIDADES_SAUDE\(cnes\), distrito_sanitario_codigo, data_atendimento, tipo_atendimento, profissional_tipo,) Tj ET
+0.120 0.180 0.250 rg BT /F1 6.3 Tf 1 0 0 1 438.0 441.0 Tm (idade, raca_cor, deficiencia_tipo, deseja_informar_orientacao_sexual, orientacao_sexual,) Tj ET
+0.120 0.180 0.250 rg BT /F1 6.3 Tf 1 0 0 1 438.0 431.0 Tm (deseja_informar_identidade_genero, identidade_genero, nome_social) Tj ET
+0.975 0.985 0.992 rg 0.700 0.770 0.820 RG 0.7 w 431 370 387 44 re B
+0.100 0.310 0.490 rg 0.100 0.310 0.490 RG 0.4 w 431 391 387 23 re B
+1.000 1.000 1.000 rg BT /F2 7.6 Tf 1 0 0 1 438.0 399.0 Tm (MOCK_POPULACAO_NEGRA_DISTRITO) Tj ET
+0.120 0.180 0.250 rg BT /F1 6.3 Tf 1 0 0 1 438.0 378.0 Tm (distrito_sanitario_codigo PK, populacao_negra_pct_esperado) Tj ET
+0.570 0.250 0.180 rg BT /F2 7 Tf 1 0 0 1 24.0 38.0 Tm (MOCK_PEC_ATENDIMENTOS e MOCK_POPULACAO_NEGRA_DISTRITO contem dados ficticios/simulados.) Tj ET
+endstream
+endobj
+10 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 842 595] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 9 0 R >>
+endobj
+11 0 obj
+<< /Length 13668 >>
+stream
+0.150 0.380 0.550 rg BT /F2 8 Tf 1 0 0 1 24.0 566.0 Tm (EQUidados | ETAPA 01) Tj ET
+0.090 0.240 0.380 rg BT /F2 17 Tf 1 0 0 1 24.0 544.0 Tm (5. Tabela do dicionario de dados) Tj ET
+0.340 0.400 0.450 rg BT /F1 8 Tf 1 0 0 1 24.0 527.0 Tm (Unidades, equipes e referencias do IBGE) Tj ET
+0.720 0.790 0.840 RG 0.5 w 24 517 m 818 517 l S
+0.420 0.470 0.510 rg BT /F1 6.6 Tf 1 0 0 1 24.0 15.0 Tm (Equidados - Equidade em Saude | Recife) Tj ET
+0.420 0.470 0.510 rg BT /F1 6.6 Tf 1 0 0 1 798.0 15.0 Tm (4) Tj ET
+0.100 0.310 0.490 rg 0.100 0.310 0.490 RG 0.4 w 24 482 794 22 re B
+1.000 1.000 1.000 rg BT /F2 6.7 Tf 1 0 0 1 28.0 490.0 Tm (Tabela) Tj ET
+1.000 1.000 1.000 rg BT /F2 6.7 Tf 1 0 0 1 167.0 490.0 Tm (Campo) Tj ET
+1.000 1.000 1.000 rg BT /F2 6.7 Tf 1 0 0 1 305.0 490.0 Tm (Tipo) Tj ET
+1.000 1.000 1.000 rg BT /F2 6.7 Tf 1 0 0 1 416.0 490.0 Tm (Chave / restricao) Tj ET
+1.000 1.000 1.000 rg BT /F2 6.7 Tf 1 0 0 1 612.0 490.0 Tm (Descricao) Tj ET
+0.940 0.970 0.985 rg 24 463 794 19 re f
+0.760 0.820 0.860 RG 0.35 w 24 463 m 818 463 l S
+0.120 0.180 0.250 rg BT /F1 5.9 Tf 1 0 0 1 28.0 472.0 Tm (UNIDADES_SAUDE) Tj ET
+0.820 0.850 0.880 RG 0.3 w 24 482 m 24 463 l S
+0.120 0.180 0.250 rg BT /F1 5.9 Tf 1 0 0 1 167.0 472.0 Tm (cnes) Tj ET
+0.820 0.850 0.880 RG 0.3 w 163 482 m 163 463 l S
+0.120 0.180 0.250 rg BT /F1 5.9 Tf 1 0 0 1 305.0 472.0 Tm (TEXT) Tj ET
+0.820 0.850 0.880 RG 0.3 w 301 482 m 301 463 l S
+0.120 0.180 0.250 rg BT /F1 5.9 Tf 1 0 0 1 416.0 472.0 Tm (PK) Tj ET
+0.820 0.850 0.880 RG 0.3 w 412 482 m 412 463 l S
+0.120 0.180 0.250 rg BT /F1 5.9 Tf 1 0 0 1 612.0 472.0 Tm (Codigo CNES identificador da unidade de saude.) Tj ET
+0.820 0.850 0.880 RG 0.3 w 608 482 m 608 463 l S
+1.000 1.000 1.000 rg 24 444 794 19 re f
+0.760 0.820 0.860 RG 0.35 w 24 444 m 818 444 l S
+0.120 0.180 0.250 rg BT /F1 5.9 Tf 1 0 0 1 28.0 453.0 Tm (UNIDADES_SAUDE) Tj ET
+0.820 0.850 0.880 RG 0.3 w 24 463 m 24 444 l S
+0.120 0.180 0.250 rg BT /F1 5.9 Tf 1 0 0 1 167.0 453.0 Tm (nome_fantasia) Tj ET
+0.820 0.850 0.880 RG 0.3 w 163 463 m 163 444 l S
+0.120 0.180 0.250 rg BT /F1 5.9 Tf 1 0 0 1 305.0 453.0 Tm (TEXT) Tj ET
+0.820 0.850 0.880 RG 0.3 w 301 463 m 301 444 l S
+0.120 0.180 0.250 rg BT /F1 5.9 Tf 1 0 0 1 416.0 453.0 Tm (-) Tj ET
+0.820 0.850 0.880 RG 0.3 w 412 463 m 412 444 l S
+0.120 0.180 0.250 rg BT /F1 5.9 Tf 1 0 0 1 612.0 453.0 Tm (Nome fantasia da unidade.) Tj ET
+0.820 0.850 0.880 RG 0.3 w 608 463 m 608 444 l S
+0.940 0.970 0.985 rg 24 425 794 19 re f
+0.760 0.820 0.860 RG 0.35 w 24 425 m 818 425 l S
+0.120 0.180 0.250 rg BT /F1 5.9 Tf 1 0 0 1 28.0 434.0 Tm (UNIDADES_SAUDE) Tj ET
+0.820 0.850 0.880 RG 0.3 w 24 444 m 24 425 l S
+0.120 0.180 0.250 rg BT /F1 5.9 Tf 1 0 0 1 167.0 434.0 Tm (nome_empresarial) Tj ET
+0.820 0.850 0.880 RG 0.3 w 163 444 m 163 425 l S
+0.120 0.180 0.250 rg BT /F1 5.9 Tf 1 0 0 1 305.0 434.0 Tm (TEXT) Tj ET
+0.820 0.850 0.880 RG 0.3 w 301 444 m 301 425 l S
+0.120 0.180 0.250 rg BT /F1 5.9 Tf 1 0 0 1 416.0 434.0 Tm (-) Tj ET
+0.820 0.850 0.880 RG 0.3 w 412 444 m 412 425 l S
+0.120 0.180 0.250 rg BT /F1 5.9 Tf 1 0 0 1 612.0 434.0 Tm (Nome empresarial da unidade.) Tj ET
+0.820 0.850 0.880 RG 0.3 w 608 444 m 608 425 l S
+1.000 1.000 1.000 rg 24 406 794 19 re f
+0.760 0.820 0.860 RG 0.35 w 24 406 m 818 406 l S
+0.120 0.180 0.250 rg BT /F1 5.9 Tf 1 0 0 1 28.0 415.0 Tm (UNIDADES_SAUDE) Tj ET
+0.820 0.850 0.880 RG 0.3 w 24 425 m 24 406 l S
+0.120 0.180 0.250 rg BT /F1 5.9 Tf 1 0 0 1 167.0 415.0 Tm (bairro) Tj ET
+0.820 0.850 0.880 RG 0.3 w 163 425 m 163 406 l S
+0.120 0.180 0.250 rg BT /F1 5.9 Tf 1 0 0 1 305.0 415.0 Tm (TEXT) Tj ET
+0.820 0.850 0.880 RG 0.3 w 301 425 m 301 406 l S
+0.120 0.180 0.250 rg BT /F1 5.9 Tf 1 0 0 1 416.0 415.0 Tm (-) Tj ET
+0.820 0.850 0.880 RG 0.3 w 412 425 m 412 406 l S
+0.120 0.180 0.250 rg BT /F1 5.9 Tf 1 0 0 1 612.0 415.0 Tm (Bairro onde a unidade esta localizada.) Tj ET
+0.820 0.850 0.880 RG 0.3 w 608 425 m 608 406 l S
+0.940 0.970 0.985 rg 24 387 794 19 re f
+0.760 0.820 0.860 RG 0.35 w 24 387 m 818 387 l S
+0.120 0.180 0.250 rg BT /F1 5.9 Tf 1 0 0 1 28.0 396.0 Tm (UNIDADES_SAUDE) Tj ET
+0.820 0.850 0.880 RG 0.3 w 24 406 m 24 387 l S
+0.120 0.180 0.250 rg BT /F1 5.9 Tf 1 0 0 1 167.0 396.0 Tm (distrito_sanitario_codigo) Tj ET
+0.820 0.850 0.880 RG 0.3 w 163 406 m 163 387 l S
+0.120 0.180 0.250 rg BT /F1 5.9 Tf 1 0 0 1 305.0 396.0 Tm (TEXT) Tj ET
+0.820 0.850 0.880 RG 0.3 w 301 406 m 301 387 l S
+0.120 0.180 0.250 rg BT /F1 5.9 Tf 1 0 0 1 416.0 396.0 Tm (-) Tj ET
+0.820 0.850 0.880 RG 0.3 w 412 406 m 412 387 l S
+0.120 0.180 0.250 rg BT /F1 5.9 Tf 1 0 0 1 612.0 396.0 Tm (Codigo do distrito sanitario associado a unidade.) Tj ET
+0.820 0.850 0.880 RG 0.3 w 608 406 m 608 387 l S
+1.000 1.000 1.000 rg 24 368 794 19 re f
+0.760 0.820 0.860 RG 0.35 w 24 368 m 818 368 l S
+0.120 0.180 0.250 rg BT /F1 5.9 Tf 1 0 0 1 28.0 377.0 Tm (UNIDADES_SAUDE) Tj ET
+0.820 0.850 0.880 RG 0.3 w 24 387 m 24 368 l S
+0.120 0.180 0.250 rg BT /F1 5.9 Tf 1 0 0 1 167.0 377.0 Tm (distrito_sanitario_nome) Tj ET
+0.820 0.850 0.880 RG 0.3 w 163 387 m 163 368 l S
+0.120 0.180 0.250 rg BT /F1 5.9 Tf 1 0 0 1 305.0 377.0 Tm (TEXT) Tj ET
+0.820 0.850 0.880 RG 0.3 w 301 387 m 301 368 l S
+0.120 0.180 0.250 rg BT /F1 5.9 Tf 1 0 0 1 416.0 377.0 Tm (-) Tj ET
+0.820 0.850 0.880 RG 0.3 w 412 387 m 412 368 l S
+0.120 0.180 0.250 rg BT /F1 5.9 Tf 1 0 0 1 612.0 377.0 Tm (Nome do distrito sanitario associado a unidade.) Tj ET
+0.820 0.850 0.880 RG 0.3 w 608 387 m 608 368 l S
+0.940 0.970 0.985 rg 24 349 794 19 re f
+0.760 0.820 0.860 RG 0.35 w 24 349 m 818 349 l S
+0.120 0.180 0.250 rg BT /F1 5.9 Tf 1 0 0 1 28.0 358.0 Tm (UNIDADES_SAUDE) Tj ET
+0.820 0.850 0.880 RG 0.3 w 24 368 m 24 349 l S
+0.120 0.180 0.250 rg BT /F1 5.9 Tf 1 0 0 1 167.0 358.0 Tm (endereco) Tj ET
+0.820 0.850 0.880 RG 0.3 w 163 368 m 163 349 l S
+0.120 0.180 0.250 rg BT /F1 5.9 Tf 1 0 0 1 305.0 358.0 Tm (TEXT) Tj ET
+0.820 0.850 0.880 RG 0.3 w 301 368 m 301 349 l S
+0.120 0.180 0.250 rg BT /F1 5.9 Tf 1 0 0 1 416.0 358.0 Tm (-) Tj ET
+0.820 0.850 0.880 RG 0.3 w 412 368 m 412 349 l S
+0.120 0.180 0.250 rg BT /F1 5.9 Tf 1 0 0 1 612.0 358.0 Tm (Logradouro da unidade.) Tj ET
+0.820 0.850 0.880 RG 0.3 w 608 368 m 608 349 l S
+1.000 1.000 1.000 rg 24 330 794 19 re f
+0.760 0.820 0.860 RG 0.35 w 24 330 m 818 330 l S
+0.120 0.180 0.250 rg BT /F1 5.9 Tf 1 0 0 1 28.0 339.0 Tm (UNIDADES_SAUDE) Tj ET
+0.820 0.850 0.880 RG 0.3 w 24 349 m 24 330 l S
+0.120 0.180 0.250 rg BT /F1 5.9 Tf 1 0 0 1 167.0 339.0 Tm (cep) Tj ET
+0.820 0.850 0.880 RG 0.3 w 163 349 m 163 330 l S
+0.120 0.180 0.250 rg BT /F1 5.9 Tf 1 0 0 1 305.0 339.0 Tm (TEXT) Tj ET
+0.820 0.850 0.880 RG 0.3 w 301 349 m 301 330 l S
+0.120 0.180 0.250 rg BT /F1 5.9 Tf 1 0 0 1 416.0 339.0 Tm (-) Tj ET
+0.820 0.850 0.880 RG 0.3 w 412 349 m 412 330 l S
+0.120 0.180 0.250 rg BT /F1 5.9 Tf 1 0 0 1 612.0 339.0 Tm (CEP da unidade.) Tj ET
+0.820 0.850 0.880 RG 0.3 w 608 349 m 608 330 l S
+0.940 0.970 0.985 rg 24 311 794 19 re f
+0.760 0.820 0.860 RG 0.35 w 24 311 m 818 311 l S
+0.120 0.180 0.250 rg BT /F1 5.9 Tf 1 0 0 1 28.0 320.0 Tm (UNIDADES_SAUDE) Tj ET
+0.820 0.850 0.880 RG 0.3 w 24 330 m 24 311 l S
+0.120 0.180 0.250 rg BT /F1 5.9 Tf 1 0 0 1 167.0 320.0 Tm (latitude) Tj ET
+0.820 0.850 0.880 RG 0.3 w 163 330 m 163 311 l S
+0.120 0.180 0.250 rg BT /F1 5.9 Tf 1 0 0 1 305.0 320.0 Tm (DOUBLE PRECISION) Tj ET
+0.820 0.850 0.880 RG 0.3 w 301 330 m 301 311 l S
+0.120 0.180 0.250 rg BT /F1 5.9 Tf 1 0 0 1 416.0 320.0 Tm (-) Tj ET
+0.820 0.850 0.880 RG 0.3 w 412 330 m 412 311 l S
+0.120 0.180 0.250 rg BT /F1 5.9 Tf 1 0 0 1 612.0 320.0 Tm (Latitude da localizacao geografica.) Tj ET
+0.820 0.850 0.880 RG 0.3 w 608 330 m 608 311 l S
+1.000 1.000 1.000 rg 24 292 794 19 re f
+0.760 0.820 0.860 RG 0.35 w 24 292 m 818 292 l S
+0.120 0.180 0.250 rg BT /F1 5.9 Tf 1 0 0 1 28.0 301.0 Tm (UNIDADES_SAUDE) Tj ET
+0.820 0.850 0.880 RG 0.3 w 24 311 m 24 292 l S
+0.120 0.180 0.250 rg BT /F1 5.9 Tf 1 0 0 1 167.0 301.0 Tm (longitude) Tj ET
+0.820 0.850 0.880 RG 0.3 w 163 311 m 163 292 l S
+0.120 0.180 0.250 rg BT /F1 5.9 Tf 1 0 0 1 305.0 301.0 Tm (DOUBLE PRECISION) Tj ET
+0.820 0.850 0.880 RG 0.3 w 301 311 m 301 292 l S
+0.120 0.180 0.250 rg BT /F1 5.9 Tf 1 0 0 1 416.0 301.0 Tm (-) Tj ET
+0.820 0.850 0.880 RG 0.3 w 412 311 m 412 292 l S
+0.120 0.180 0.250 rg BT /F1 5.9 Tf 1 0 0 1 612.0 301.0 Tm (Longitude da localizacao geografica.) Tj ET
+0.820 0.850 0.880 RG 0.3 w 608 311 m 608 292 l S
+0.940 0.970 0.985 rg 24 273 794 19 re f
+0.760 0.820 0.860 RG 0.35 w 24 273 m 818 273 l S
+0.120 0.180 0.250 rg BT /F1 5.9 Tf 1 0 0 1 28.0 282.0 Tm (UNIDADES_SAUDE) Tj ET
+0.820 0.850 0.880 RG 0.3 w 24 292 m 24 273 l S
+0.120 0.180 0.250 rg BT /F1 5.9 Tf 1 0 0 1 167.0 282.0 Tm (tipo_estabelecimento) Tj ET
+0.820 0.850 0.880 RG 0.3 w 163 292 m 163 273 l S
+0.120 0.180 0.250 rg BT /F1 5.9 Tf 1 0 0 1 305.0 282.0 Tm (TEXT) Tj ET
+0.820 0.850 0.880 RG 0.3 w 301 292 m 301 273 l S
+0.120 0.180 0.250 rg BT /F1 5.9 Tf 1 0 0 1 416.0 282.0 Tm (-) Tj ET
+0.820 0.850 0.880 RG 0.3 w 412 292 m 412 273 l S
+0.120 0.180 0.250 rg BT /F1 5.9 Tf 1 0 0 1 612.0 282.0 Tm (Tipo do estabelecimento de saude.) Tj ET
+0.820 0.850 0.880 RG 0.3 w 608 292 m 608 273 l S
+1.000 1.000 1.000 rg 24 254 794 19 re f
+0.760 0.820 0.860 RG 0.35 w 24 254 m 818 254 l S
+0.120 0.180 0.250 rg BT /F1 5.9 Tf 1 0 0 1 28.0 263.0 Tm (EQUIPES_SAUDE) Tj ET
+0.820 0.850 0.880 RG 0.3 w 24 273 m 24 254 l S
+0.120 0.180 0.250 rg BT /F1 5.9 Tf 1 0 0 1 167.0 263.0 Tm (codigo_equipe) Tj ET
+0.820 0.850 0.880 RG 0.3 w 163 273 m 163 254 l S
+0.120 0.180 0.250 rg BT /F1 5.9 Tf 1 0 0 1 305.0 263.0 Tm (TEXT) Tj ET
+0.820 0.850 0.880 RG 0.3 w 301 273 m 301 254 l S
+0.120 0.180 0.250 rg BT /F1 5.9 Tf 1 0 0 1 416.0 263.0 Tm (PK) Tj ET
+0.820 0.850 0.880 RG 0.3 w 412 273 m 412 254 l S
+0.120 0.180 0.250 rg BT /F1 5.9 Tf 1 0 0 1 612.0 263.0 Tm (Codigo identificador da equipe.) Tj ET
+0.820 0.850 0.880 RG 0.3 w 608 273 m 608 254 l S
+0.940 0.970 0.985 rg 24 235 794 19 re f
+0.760 0.820 0.860 RG 0.35 w 24 235 m 818 235 l S
+0.120 0.180 0.250 rg BT /F1 5.9 Tf 1 0 0 1 28.0 244.0 Tm (EQUIPES_SAUDE) Tj ET
+0.820 0.850 0.880 RG 0.3 w 24 254 m 24 235 l S
+0.120 0.180 0.250 rg BT /F1 5.9 Tf 1 0 0 1 167.0 244.0 Tm (nome_equipe) Tj ET
+0.820 0.850 0.880 RG 0.3 w 163 254 m 163 235 l S
+0.120 0.180 0.250 rg BT /F1 5.9 Tf 1 0 0 1 305.0 244.0 Tm (TEXT) Tj ET
+0.820 0.850 0.880 RG 0.3 w 301 254 m 301 235 l S
+0.120 0.180 0.250 rg BT /F1 5.9 Tf 1 0 0 1 416.0 244.0 Tm (-) Tj ET
+0.820 0.850 0.880 RG 0.3 w 412 254 m 412 235 l S
+0.120 0.180 0.250 rg BT /F1 5.9 Tf 1 0 0 1 612.0 244.0 Tm (Nome da equipe.) Tj ET
+0.820 0.850 0.880 RG 0.3 w 608 254 m 608 235 l S
+1.000 1.000 1.000 rg 24 216 794 19 re f
+0.760 0.820 0.860 RG 0.35 w 24 216 m 818 216 l S
+0.120 0.180 0.250 rg BT /F1 5.9 Tf 1 0 0 1 28.0 225.0 Tm (EQUIPES_SAUDE) Tj ET
+0.820 0.850 0.880 RG 0.3 w 24 235 m 24 216 l S
+0.120 0.180 0.250 rg BT /F1 5.9 Tf 1 0 0 1 167.0 225.0 Tm (tipo_equipe) Tj ET
+0.820 0.850 0.880 RG 0.3 w 163 235 m 163 216 l S
+0.120 0.180 0.250 rg BT /F1 5.9 Tf 1 0 0 1 305.0 225.0 Tm (TEXT) Tj ET
+0.820 0.850 0.880 RG 0.3 w 301 235 m 301 216 l S
+0.120 0.180 0.250 rg BT /F1 5.9 Tf 1 0 0 1 416.0 225.0 Tm (-) Tj ET
+0.820 0.850 0.880 RG 0.3 w 412 235 m 412 216 l S
+0.120 0.180 0.250 rg BT /F1 5.9 Tf 1 0 0 1 612.0 225.0 Tm (Tipo ou descricao da equipe.) Tj ET
+0.820 0.850 0.880 RG 0.3 w 608 235 m 608 216 l S
+0.940 0.970 0.985 rg 24 197 794 19 re f
+0.760 0.820 0.860 RG 0.35 w 24 197 m 818 197 l S
+0.120 0.180 0.250 rg BT /F1 5.9 Tf 1 0 0 1 28.0 206.0 Tm (EQUIPES_SAUDE) Tj ET
+0.820 0.850 0.880 RG 0.3 w 24 216 m 24 197 l S
+0.120 0.180 0.250 rg BT /F1 5.9 Tf 1 0 0 1 167.0 206.0 Tm (cnes_unidade) Tj ET
+0.820 0.850 0.880 RG 0.3 w 163 216 m 163 197 l S
+0.120 0.180 0.250 rg BT /F1 5.9 Tf 1 0 0 1 305.0 206.0 Tm (TEXT) Tj ET
+0.820 0.850 0.880 RG 0.3 w 301 216 m 301 197 l S
+0.120 0.180 0.250 rg BT /F1 5.9 Tf 1 0 0 1 416.0 206.0 Tm (FK -> UNIDADES_SAUDE\(cnes\)) Tj ET
+0.820 0.850 0.880 RG 0.3 w 412 216 m 412 197 l S
+0.120 0.180 0.250 rg BT /F1 5.9 Tf 1 0 0 1 612.0 206.0 Tm (Codigo CNES da unidade vinculada.) Tj ET
+0.820 0.850 0.880 RG 0.3 w 608 216 m 608 197 l S
+1.000 1.000 1.000 rg 24 178 794 19 re f
+0.760 0.820 0.860 RG 0.35 w 24 178 m 818 178 l S
+0.120 0.180 0.250 rg BT /F1 5.9 Tf 1 0 0 1 28.0 187.0 Tm (EQUIPES_SAUDE) Tj ET
+0.820 0.850 0.880 RG 0.3 w 24 197 m 24 178 l S
+0.120 0.180 0.250 rg BT /F1 5.9 Tf 1 0 0 1 167.0 187.0 Tm (data_ativacao) Tj ET
+0.820 0.850 0.880 RG 0.3 w 163 197 m 163 178 l S
+0.120 0.180 0.250 rg BT /F1 5.9 Tf 1 0 0 1 305.0 187.0 Tm (TEXT) Tj ET
+0.820 0.850 0.880 RG 0.3 w 301 197 m 301 178 l S
+0.120 0.180 0.250 rg BT /F1 5.9 Tf 1 0 0 1 416.0 187.0 Tm (-) Tj ET
+0.820 0.850 0.880 RG 0.3 w 412 197 m 412 178 l S
+0.120 0.180 0.250 rg BT /F1 5.9 Tf 1 0 0 1 612.0 187.0 Tm (Data de ativacao conforme fornecida na fonte.) Tj ET
+0.820 0.850 0.880 RG 0.3 w 608 197 m 608 178 l S
+0.940 0.970 0.985 rg 24 159 794 19 re f
+0.760 0.820 0.860 RG 0.35 w 24 159 m 818 159 l S
+0.120 0.180 0.250 rg BT /F1 5.9 Tf 1 0 0 1 28.0 168.0 Tm (EQUIPES_SAUDE) Tj ET
+0.820 0.850 0.880 RG 0.3 w 24 178 m 24 159 l S
+0.120 0.180 0.250 rg BT /F1 5.9 Tf 1 0 0 1 167.0 168.0 Tm (data_desativacao) Tj ET
+0.820 0.850 0.880 RG 0.3 w 163 178 m 163 159 l S
+0.120 0.180 0.250 rg BT /F1 5.9 Tf 1 0 0 1 305.0 168.0 Tm (TEXT) Tj ET
+0.820 0.850 0.880 RG 0.3 w 301 178 m 301 159 l S
+0.120 0.180 0.250 rg BT /F1 5.9 Tf 1 0 0 1 416.0 168.0 Tm (-) Tj ET
+0.820 0.850 0.880 RG 0.3 w 412 178 m 412 159 l S
+0.120 0.180 0.250 rg BT /F1 5.9 Tf 1 0 0 1 612.0 168.0 Tm (Data de desativacao; pode estar vazia para equipe ativa.) Tj ET
+0.820 0.850 0.880 RG 0.3 w 608 178 m 608 159 l S
+0.560 0.670 0.760 RG 0.6 w 24 504 m 24 159 l S
+0.560 0.670 0.760 RG 0.6 w 818 504 m 818 159 l S
+0.340 0.400 0.450 rg BT /F1 6.2 Tf 1 0 0 1 24.0 27.0 Tm (PK = chave primaria | FK = chave estrangeira | Tipos conforme o DDL PostgreSQL.) Tj ET
+endstream
+endobj
+12 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 842 595] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 11 0 R >>
+endobj
+13 0 obj
+<< /Length 7902 >>
+stream
+0.150 0.380 0.550 rg BT /F2 8 Tf 1 0 0 1 24.0 566.0 Tm (EQUidados | ETAPA 01) Tj ET
+0.090 0.240 0.380 rg BT /F2 17 Tf 1 0 0 1 24.0 544.0 Tm (5. Tabela do dicionario de dados) Tj ET
+0.340 0.400 0.450 rg BT /F1 8 Tf 1 0 0 1 24.0 527.0 Tm (Censo de raca/cor e deficiencia; referencia territorial) Tj ET
+0.720 0.790 0.840 RG 0.5 w 24 517 m 818 517 l S
+0.420 0.470 0.510 rg BT /F1 6.6 Tf 1 0 0 1 24.0 15.0 Tm (Equidados - Equidade em Saude | Recife) Tj ET
+0.420 0.470 0.510 rg BT /F1 6.6 Tf 1 0 0 1 798.0 15.0 Tm (5) Tj ET
+0.100 0.310 0.490 rg 0.100 0.310 0.490 RG 0.4 w 24 482 794 22 re B
+1.000 1.000 1.000 rg BT /F2 6.7 Tf 1 0 0 1 28.0 490.0 Tm (Tabela) Tj ET
+1.000 1.000 1.000 rg BT /F2 6.7 Tf 1 0 0 1 167.0 490.0 Tm (Campo) Tj ET
+1.000 1.000 1.000 rg BT /F2 6.7 Tf 1 0 0 1 305.0 490.0 Tm (Tipo) Tj ET
+1.000 1.000 1.000 rg BT /F2 6.7 Tf 1 0 0 1 416.0 490.0 Tm (Chave / restricao) Tj ET
+1.000 1.000 1.000 rg BT /F2 6.7 Tf 1 0 0 1 612.0 490.0 Tm (Descricao) Tj ET
+0.940 0.970 0.985 rg 24 463 794 19 re f
+0.760 0.820 0.860 RG 0.35 w 24 463 m 818 463 l S
+0.120 0.180 0.250 rg BT /F1 5.9 Tf 1 0 0 1 28.0 472.0 Tm (CENSO_RACA_COR) Tj ET
+0.820 0.850 0.880 RG 0.3 w 24 482 m 24 463 l S
+0.120 0.180 0.250 rg BT /F1 5.9 Tf 1 0 0 1 167.0 472.0 Tm (raca_cor) Tj ET
+0.820 0.850 0.880 RG 0.3 w 163 482 m 163 463 l S
+0.120 0.180 0.250 rg BT /F1 5.9 Tf 1 0 0 1 305.0 472.0 Tm (TEXT) Tj ET
+0.820 0.850 0.880 RG 0.3 w 301 482 m 301 463 l S
+0.120 0.180 0.250 rg BT /F1 5.9 Tf 1 0 0 1 416.0 472.0 Tm (PK) Tj ET
+0.820 0.850 0.880 RG 0.3 w 412 482 m 412 463 l S
+0.120 0.180 0.250 rg BT /F1 5.9 Tf 1 0 0 1 612.0 472.0 Tm (Categoria de raca/cor do Censo.) Tj ET
+0.820 0.850 0.880 RG 0.3 w 608 482 m 608 463 l S
+1.000 1.000 1.000 rg 24 444 794 19 re f
+0.760 0.820 0.860 RG 0.35 w 24 444 m 818 444 l S
+0.120 0.180 0.250 rg BT /F1 5.9 Tf 1 0 0 1 28.0 453.0 Tm (CENSO_RACA_COR) Tj ET
+0.820 0.850 0.880 RG 0.3 w 24 463 m 24 444 l S
+0.120 0.180 0.250 rg BT /F1 5.9 Tf 1 0 0 1 167.0 453.0 Tm (populacao) Tj ET
+0.820 0.850 0.880 RG 0.3 w 163 463 m 163 444 l S
+0.120 0.180 0.250 rg BT /F1 5.9 Tf 1 0 0 1 305.0 453.0 Tm (BIGINT) Tj ET
+0.820 0.850 0.880 RG 0.3 w 301 463 m 301 444 l S
+0.120 0.180 0.250 rg BT /F1 5.9 Tf 1 0 0 1 416.0 453.0 Tm (-) Tj ET
+0.820 0.850 0.880 RG 0.3 w 412 463 m 412 444 l S
+0.120 0.180 0.250 rg BT /F1 5.9 Tf 1 0 0 1 612.0 453.0 Tm (Populacao registrada para a categoria.) Tj ET
+0.820 0.850 0.880 RG 0.3 w 608 463 m 608 444 l S
+0.940 0.970 0.985 rg 24 425 794 19 re f
+0.760 0.820 0.860 RG 0.35 w 24 425 m 818 425 l S
+0.120 0.180 0.250 rg BT /F1 5.9 Tf 1 0 0 1 28.0 434.0 Tm (CENSO_RACA_COR) Tj ET
+0.820 0.850 0.880 RG 0.3 w 24 444 m 24 425 l S
+0.120 0.180 0.250 rg BT /F1 5.9 Tf 1 0 0 1 167.0 434.0 Tm (ano) Tj ET
+0.820 0.850 0.880 RG 0.3 w 163 444 m 163 425 l S
+0.120 0.180 0.250 rg BT /F1 5.9 Tf 1 0 0 1 305.0 434.0 Tm (INTEGER) Tj ET
+0.820 0.850 0.880 RG 0.3 w 301 444 m 301 425 l S
+0.120 0.180 0.250 rg BT /F1 5.9 Tf 1 0 0 1 416.0 434.0 Tm (-) Tj ET
+0.820 0.850 0.880 RG 0.3 w 412 444 m 412 425 l S
+0.120 0.180 0.250 rg BT /F1 5.9 Tf 1 0 0 1 612.0 434.0 Tm (Ano de referencia do dado.) Tj ET
+0.820 0.850 0.880 RG 0.3 w 608 444 m 608 425 l S
+1.000 1.000 1.000 rg 24 406 794 19 re f
+0.760 0.820 0.860 RG 0.35 w 24 406 m 818 406 l S
+0.120 0.180 0.250 rg BT /F1 5.9 Tf 1 0 0 1 28.0 415.0 Tm (CENSO_DEFICIENCIA) Tj ET
+0.820 0.850 0.880 RG 0.3 w 24 425 m 24 406 l S
+0.120 0.180 0.250 rg BT /F1 5.9 Tf 1 0 0 1 167.0 415.0 Tm (tipo_dificuldade) Tj ET
+0.820 0.850 0.880 RG 0.3 w 163 425 m 163 406 l S
+0.120 0.180 0.250 rg BT /F1 5.9 Tf 1 0 0 1 305.0 415.0 Tm (TEXT) Tj ET
+0.820 0.850 0.880 RG 0.3 w 301 425 m 301 406 l S
+0.120 0.180 0.250 rg BT /F1 5.9 Tf 1 0 0 1 416.0 415.0 Tm (PK) Tj ET
+0.820 0.850 0.880 RG 0.3 w 412 425 m 412 406 l S
+0.120 0.180 0.250 rg BT /F1 5.9 Tf 1 0 0 1 612.0 415.0 Tm (Categoria de dificuldade ou linha do total oficial.) Tj ET
+0.820 0.850 0.880 RG 0.3 w 608 425 m 608 406 l S
+0.940 0.970 0.985 rg 24 387 794 19 re f
+0.760 0.820 0.860 RG 0.35 w 24 387 m 818 387 l S
+0.120 0.180 0.250 rg BT /F1 5.9 Tf 1 0 0 1 28.0 396.0 Tm (CENSO_DEFICIENCIA) Tj ET
+0.820 0.850 0.880 RG 0.3 w 24 406 m 24 387 l S
+0.120 0.180 0.250 rg BT /F1 5.9 Tf 1 0 0 1 167.0 396.0 Tm (populacao) Tj ET
+0.820 0.850 0.880 RG 0.3 w 163 406 m 163 387 l S
+0.120 0.180 0.250 rg BT /F1 5.9 Tf 1 0 0 1 305.0 396.0 Tm (BIGINT) Tj ET
+0.820 0.850 0.880 RG 0.3 w 301 406 m 301 387 l S
+0.120 0.180 0.250 rg BT /F1 5.9 Tf 1 0 0 1 416.0 396.0 Tm (-) Tj ET
+0.820 0.850 0.880 RG 0.3 w 412 406 m 412 387 l S
+0.120 0.180 0.250 rg BT /F1 5.9 Tf 1 0 0 1 612.0 396.0 Tm (Populacao contabilizada; categorias podem se sobrepor.) Tj ET
+0.820 0.850 0.880 RG 0.3 w 608 406 m 608 387 l S
+1.000 1.000 1.000 rg 24 368 794 19 re f
+0.760 0.820 0.860 RG 0.35 w 24 368 m 818 368 l S
+0.120 0.180 0.250 rg BT /F1 5.9 Tf 1 0 0 1 28.0 377.0 Tm (CENSO_DEFICIENCIA) Tj ET
+0.820 0.850 0.880 RG 0.3 w 24 387 m 24 368 l S
+0.120 0.180 0.250 rg BT /F1 5.9 Tf 1 0 0 1 167.0 377.0 Tm (ano) Tj ET
+0.820 0.850 0.880 RG 0.3 w 163 387 m 163 368 l S
+0.120 0.180 0.250 rg BT /F1 5.9 Tf 1 0 0 1 305.0 377.0 Tm (INTEGER) Tj ET
+0.820 0.850 0.880 RG 0.3 w 301 387 m 301 368 l S
+0.120 0.180 0.250 rg BT /F1 5.9 Tf 1 0 0 1 416.0 377.0 Tm (-) Tj ET
+0.820 0.850 0.880 RG 0.3 w 412 387 m 412 368 l S
+0.120 0.180 0.250 rg BT /F1 5.9 Tf 1 0 0 1 612.0 377.0 Tm (Ano de referencia do dado.) Tj ET
+0.820 0.850 0.880 RG 0.3 w 608 387 m 608 368 l S
+0.940 0.970 0.985 rg 24 349 794 19 re f
+0.760 0.820 0.860 RG 0.35 w 24 349 m 818 349 l S
+0.120 0.180 0.250 rg BT /F1 5.9 Tf 1 0 0 1 28.0 358.0 Tm (CENSO_DEFICIENCIA) Tj ET
+0.820 0.850 0.880 RG 0.3 w 24 368 m 24 349 l S
+0.120 0.180 0.250 rg BT /F1 5.9 Tf 1 0 0 1 167.0 358.0 Tm (e_total) Tj ET
+0.820 0.850 0.880 RG 0.3 w 163 368 m 163 349 l S
+0.120 0.180 0.250 rg BT /F1 5.9 Tf 1 0 0 1 305.0 358.0 Tm (BOOLEAN) Tj ET
+0.820 0.850 0.880 RG 0.3 w 301 368 m 301 349 l S
+0.120 0.180 0.250 rg BT /F1 5.9 Tf 1 0 0 1 416.0 358.0 Tm (NOT NULL DEFAULT FALSE) Tj ET
+0.820 0.850 0.880 RG 0.3 w 412 368 m 412 349 l S
+0.120 0.180 0.250 rg BT /F1 5.9 Tf 1 0 0 1 612.0 358.0 Tm (Indica o registro do total oficial do Censo.) Tj ET
+0.820 0.850 0.880 RG 0.3 w 608 368 m 608 349 l S
+1.000 1.000 1.000 rg 24 330 794 19 re f
+0.760 0.820 0.860 RG 0.35 w 24 330 m 818 330 l S
+0.560 0.200 0.160 rg BT /F1 5.9 Tf 1 0 0 1 28.0 339.0 Tm (MOCK_POPULACAO_NEGRA_DISTRITO) Tj ET
+0.820 0.850 0.880 RG 0.3 w 24 349 m 24 330 l S
+0.560 0.200 0.160 rg BT /F1 5.9 Tf 1 0 0 1 167.0 339.0 Tm (distrito_sanitario_codigo) Tj ET
+0.820 0.850 0.880 RG 0.3 w 163 349 m 163 330 l S
+0.560 0.200 0.160 rg BT /F1 5.9 Tf 1 0 0 1 305.0 339.0 Tm (TEXT) Tj ET
+0.820 0.850 0.880 RG 0.3 w 301 349 m 301 330 l S
+0.560 0.200 0.160 rg BT /F1 5.9 Tf 1 0 0 1 416.0 339.0 Tm (PK) Tj ET
+0.820 0.850 0.880 RG 0.3 w 412 349 m 412 330 l S
+0.560 0.200 0.160 rg BT /F1 5.9 Tf 1 0 0 1 612.0 339.0 Tm (Codigo do distrito da referencia simulada.) Tj ET
+0.820 0.850 0.880 RG 0.3 w 608 349 m 608 330 l S
+0.940 0.970 0.985 rg 24 311 794 19 re f
+0.760 0.820 0.860 RG 0.35 w 24 311 m 818 311 l S
+0.560 0.200 0.160 rg BT /F1 5.9 Tf 1 0 0 1 28.0 320.0 Tm (MOCK_POPULACAO_NEGRA_DISTRITO) Tj ET
+0.820 0.850 0.880 RG 0.3 w 24 330 m 24 311 l S
+0.560 0.200 0.160 rg BT /F1 5.9 Tf 1 0 0 1 167.0 320.0 Tm (populacao_negra_pct_esperado) Tj ET
+0.820 0.850 0.880 RG 0.3 w 163 330 m 163 311 l S
+0.560 0.200 0.160 rg BT /F1 5.9 Tf 1 0 0 1 305.0 320.0 Tm (NUMERIC) Tj ET
+0.820 0.850 0.880 RG 0.3 w 301 330 m 301 311 l S
+0.560 0.200 0.160 rg BT /F1 5.9 Tf 1 0 0 1 416.0 320.0 Tm (-) Tj ET
+0.820 0.850 0.880 RG 0.3 w 412 330 m 412 311 l S
+0.560 0.200 0.160 rg BT /F1 5.9 Tf 1 0 0 1 612.0 320.0 Tm (Percentual ilustrativo esperado; nao e estatistica real.) Tj ET
+0.820 0.850 0.880 RG 0.3 w 608 330 m 608 311 l S
+0.560 0.670 0.760 RG 0.6 w 24 504 m 24 311 l S
+0.560 0.670 0.760 RG 0.6 w 818 504 m 818 311 l S
+0.340 0.400 0.450 rg BT /F1 6.2 Tf 1 0 0 1 24.0 27.0 Tm (Censo: fonte IBGE. Referencia negra por distrito: simulada.) Tj ET
+endstream
+endobj
+14 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 842 595] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 13 0 R >>
+endobj
+15 0 obj
+<< /Length 12578 >>
+stream
+0.150 0.380 0.550 rg BT /F2 8 Tf 1 0 0 1 24.0 566.0 Tm (EQUidados | ETAPA 01) Tj ET
+0.090 0.240 0.380 rg BT /F2 17 Tf 1 0 0 1 24.0 544.0 Tm (5. Tabela do dicionario de dados) Tj ET
+0.340 0.400 0.450 rg BT /F1 8 Tf 1 0 0 1 24.0 527.0 Tm (Atendimentos simulados) Tj ET
+0.720 0.790 0.840 RG 0.5 w 24 517 m 818 517 l S
+0.420 0.470 0.510 rg BT /F1 6.6 Tf 1 0 0 1 24.0 15.0 Tm (Equidados - Equidade em Saude | Recife) Tj ET
+0.420 0.470 0.510 rg BT /F1 6.6 Tf 1 0 0 1 798.0 15.0 Tm (6) Tj ET
+0.100 0.310 0.490 rg 0.100 0.310 0.490 RG 0.4 w 24 482 794 22 re B
+1.000 1.000 1.000 rg BT /F2 6.7 Tf 1 0 0 1 28.0 490.0 Tm (Tabela) Tj ET
+1.000 1.000 1.000 rg BT /F2 6.7 Tf 1 0 0 1 167.0 490.0 Tm (Campo) Tj ET
+1.000 1.000 1.000 rg BT /F2 6.7 Tf 1 0 0 1 305.0 490.0 Tm (Tipo) Tj ET
+1.000 1.000 1.000 rg BT /F2 6.7 Tf 1 0 0 1 416.0 490.0 Tm (Chave / restricao) Tj ET
+1.000 1.000 1.000 rg BT /F2 6.7 Tf 1 0 0 1 612.0 490.0 Tm (Descricao) Tj ET
+0.940 0.970 0.985 rg 24 463 794 19 re f
+0.760 0.820 0.860 RG 0.35 w 24 463 m 818 463 l S
+0.560 0.200 0.160 rg BT /F1 5.9 Tf 1 0 0 1 28.0 472.0 Tm (MOCK_PEC_ATENDIMENTOS) Tj ET
+0.820 0.850 0.880 RG 0.3 w 24 482 m 24 463 l S
+0.560 0.200 0.160 rg BT /F1 5.9 Tf 1 0 0 1 167.0 472.0 Tm (id_atendimento) Tj ET
+0.820 0.850 0.880 RG 0.3 w 163 482 m 163 463 l S
+0.560 0.200 0.160 rg BT /F1 5.9 Tf 1 0 0 1 305.0 472.0 Tm (INTEGER) Tj ET
+0.820 0.850 0.880 RG 0.3 w 301 482 m 301 463 l S
+0.560 0.200 0.160 rg BT /F1 5.9 Tf 1 0 0 1 416.0 472.0 Tm (PK) Tj ET
+0.820 0.850 0.880 RG 0.3 w 412 482 m 412 463 l S
+0.560 0.200 0.160 rg BT /F1 5.9 Tf 1 0 0 1 612.0 472.0 Tm (Identificador do atendimento simulado.) Tj ET
+0.820 0.850 0.880 RG 0.3 w 608 482 m 608 463 l S
+1.000 1.000 1.000 rg 24 444 794 19 re f
+0.760 0.820 0.860 RG 0.35 w 24 444 m 818 444 l S
+0.560 0.200 0.160 rg BT /F1 5.9 Tf 1 0 0 1 28.0 453.0 Tm (MOCK_PEC_ATENDIMENTOS) Tj ET
+0.820 0.850 0.880 RG 0.3 w 24 463 m 24 444 l S
+0.560 0.200 0.160 rg BT /F1 5.9 Tf 1 0 0 1 167.0 453.0 Tm (codigo_equipe) Tj ET
+0.820 0.850 0.880 RG 0.3 w 163 463 m 163 444 l S
+0.560 0.200 0.160 rg BT /F1 5.9 Tf 1 0 0 1 305.0 453.0 Tm (TEXT) Tj ET
+0.820 0.850 0.880 RG 0.3 w 301 463 m 301 444 l S
+0.560 0.200 0.160 rg BT /F1 5.9 Tf 1 0 0 1 416.0 453.0 Tm (FK -> EQUIPES_SAUDE\(codigo_equipe\)) Tj ET
+0.820 0.850 0.880 RG 0.3 w 412 463 m 412 444 l S
+0.560 0.200 0.160 rg BT /F1 5.9 Tf 1 0 0 1 612.0 453.0 Tm (Equipe relacionada ao atendimento simulado.) Tj ET
+0.820 0.850 0.880 RG 0.3 w 608 463 m 608 444 l S
+0.940 0.970 0.985 rg 24 425 794 19 re f
+0.760 0.820 0.860 RG 0.35 w 24 425 m 818 425 l S
+0.560 0.200 0.160 rg BT /F1 5.9 Tf 1 0 0 1 28.0 434.0 Tm (MOCK_PEC_ATENDIMENTOS) Tj ET
+0.820 0.850 0.880 RG 0.3 w 24 444 m 24 425 l S
+0.560 0.200 0.160 rg BT /F1 5.9 Tf 1 0 0 1 167.0 434.0 Tm (cnes_unidade) Tj ET
+0.820 0.850 0.880 RG 0.3 w 163 444 m 163 425 l S
+0.560 0.200 0.160 rg BT /F1 5.9 Tf 1 0 0 1 305.0 434.0 Tm (TEXT) Tj ET
+0.820 0.850 0.880 RG 0.3 w 301 444 m 301 425 l S
+0.560 0.200 0.160 rg BT /F1 5.9 Tf 1 0 0 1 416.0 434.0 Tm (FK -> UNIDADES_SAUDE\(cnes\)) Tj ET
+0.820 0.850 0.880 RG 0.3 w 412 444 m 412 425 l S
+0.560 0.200 0.160 rg BT /F1 5.9 Tf 1 0 0 1 612.0 434.0 Tm (Unidade relacionada ao atendimento simulado.) Tj ET
+0.820 0.850 0.880 RG 0.3 w 608 444 m 608 425 l S
+1.000 1.000 1.000 rg 24 406 794 19 re f
+0.760 0.820 0.860 RG 0.35 w 24 406 m 818 406 l S
+0.560 0.200 0.160 rg BT /F1 5.9 Tf 1 0 0 1 28.0 415.0 Tm (MOCK_PEC_ATENDIMENTOS) Tj ET
+0.820 0.850 0.880 RG 0.3 w 24 425 m 24 406 l S
+0.560 0.200 0.160 rg BT /F1 5.9 Tf 1 0 0 1 167.0 415.0 Tm (distrito_sanitario_codigo) Tj ET
+0.820 0.850 0.880 RG 0.3 w 163 425 m 163 406 l S
+0.560 0.200 0.160 rg BT /F1 5.9 Tf 1 0 0 1 305.0 415.0 Tm (TEXT) Tj ET
+0.820 0.850 0.880 RG 0.3 w 301 425 m 301 406 l S
+0.560 0.200 0.160 rg BT /F1 5.9 Tf 1 0 0 1 416.0 415.0 Tm (-) Tj ET
+0.820 0.850 0.880 RG 0.3 w 412 425 m 412 406 l S
+0.560 0.200 0.160 rg BT /F1 5.9 Tf 1 0 0 1 612.0 415.0 Tm (Codigo do distrito sanitario do registro simulado.) Tj ET
+0.820 0.850 0.880 RG 0.3 w 608 425 m 608 406 l S
+0.940 0.970 0.985 rg 24 387 794 19 re f
+0.760 0.820 0.860 RG 0.35 w 24 387 m 818 387 l S
+0.560 0.200 0.160 rg BT /F1 5.9 Tf 1 0 0 1 28.0 396.0 Tm (MOCK_PEC_ATENDIMENTOS) Tj ET
+0.820 0.850 0.880 RG 0.3 w 24 406 m 24 387 l S
+0.560 0.200 0.160 rg BT /F1 5.9 Tf 1 0 0 1 167.0 396.0 Tm (data_atendimento) Tj ET
+0.820 0.850 0.880 RG 0.3 w 163 406 m 163 387 l S
+0.560 0.200 0.160 rg BT /F1 5.9 Tf 1 0 0 1 305.0 396.0 Tm (DATE) Tj ET
+0.820 0.850 0.880 RG 0.3 w 301 406 m 301 387 l S
+0.560 0.200 0.160 rg BT /F1 5.9 Tf 1 0 0 1 416.0 396.0 Tm (-) Tj ET
+0.820 0.850 0.880 RG 0.3 w 412 406 m 412 387 l S
+0.560 0.200 0.160 rg BT /F1 5.9 Tf 1 0 0 1 612.0 396.0 Tm (Data do atendimento simulado.) Tj ET
+0.820 0.850 0.880 RG 0.3 w 608 406 m 608 387 l S
+1.000 1.000 1.000 rg 24 368 794 19 re f
+0.760 0.820 0.860 RG 0.35 w 24 368 m 818 368 l S
+0.560 0.200 0.160 rg BT /F1 5.9 Tf 1 0 0 1 28.0 377.0 Tm (MOCK_PEC_ATENDIMENTOS) Tj ET
+0.820 0.850 0.880 RG 0.3 w 24 387 m 24 368 l S
+0.560 0.200 0.160 rg BT /F1 5.9 Tf 1 0 0 1 167.0 377.0 Tm (tipo_atendimento) Tj ET
+0.820 0.850 0.880 RG 0.3 w 163 387 m 163 368 l S
+0.560 0.200 0.160 rg BT /F1 5.9 Tf 1 0 0 1 305.0 377.0 Tm (TEXT) Tj ET
+0.820 0.850 0.880 RG 0.3 w 301 387 m 301 368 l S
+0.560 0.200 0.160 rg BT /F1 5.9 Tf 1 0 0 1 416.0 377.0 Tm (-) Tj ET
+0.820 0.850 0.880 RG 0.3 w 412 387 m 412 368 l S
+0.560 0.200 0.160 rg BT /F1 5.9 Tf 1 0 0 1 612.0 377.0 Tm (Tipo de atendimento, como primeira consulta ou retorno.) Tj ET
+0.820 0.850 0.880 RG 0.3 w 608 387 m 608 368 l S
+0.940 0.970 0.985 rg 24 349 794 19 re f
+0.760 0.820 0.860 RG 0.35 w 24 349 m 818 349 l S
+0.560 0.200 0.160 rg BT /F1 5.9 Tf 1 0 0 1 28.0 358.0 Tm (MOCK_PEC_ATENDIMENTOS) Tj ET
+0.820 0.850 0.880 RG 0.3 w 24 368 m 24 349 l S
+0.560 0.200 0.160 rg BT /F1 5.9 Tf 1 0 0 1 167.0 358.0 Tm (profissional_tipo) Tj ET
+0.820 0.850 0.880 RG 0.3 w 163 368 m 163 349 l S
+0.560 0.200 0.160 rg BT /F1 5.9 Tf 1 0 0 1 305.0 358.0 Tm (TEXT) Tj ET
+0.820 0.850 0.880 RG 0.3 w 301 368 m 301 349 l S
+0.560 0.200 0.160 rg BT /F1 5.9 Tf 1 0 0 1 416.0 358.0 Tm (-) Tj ET
+0.820 0.850 0.880 RG 0.3 w 412 368 m 412 349 l S
+0.560 0.200 0.160 rg BT /F1 5.9 Tf 1 0 0 1 612.0 358.0 Tm (Categoria profissional, como ACS, enfermeiro ou medico.) Tj ET
+0.820 0.850 0.880 RG 0.3 w 608 368 m 608 349 l S
+1.000 1.000 1.000 rg 24 330 794 19 re f
+0.760 0.820 0.860 RG 0.35 w 24 330 m 818 330 l S
+0.560 0.200 0.160 rg BT /F1 5.9 Tf 1 0 0 1 28.0 339.0 Tm (MOCK_PEC_ATENDIMENTOS) Tj ET
+0.820 0.850 0.880 RG 0.3 w 24 349 m 24 330 l S
+0.560 0.200 0.160 rg BT /F1 5.9 Tf 1 0 0 1 167.0 339.0 Tm (idade) Tj ET
+0.820 0.850 0.880 RG 0.3 w 163 349 m 163 330 l S
+0.560 0.200 0.160 rg BT /F1 5.9 Tf 1 0 0 1 305.0 339.0 Tm (INTEGER) Tj ET
+0.820 0.850 0.880 RG 0.3 w 301 349 m 301 330 l S
+0.560 0.200 0.160 rg BT /F1 5.9 Tf 1 0 0 1 416.0 339.0 Tm (-) Tj ET
+0.820 0.850 0.880 RG 0.3 w 412 349 m 412 330 l S
+0.560 0.200 0.160 rg BT /F1 5.9 Tf 1 0 0 1 612.0 339.0 Tm (Idade simulada da pessoa atendida.) Tj ET
+0.820 0.850 0.880 RG 0.3 w 608 349 m 608 330 l S
+0.940 0.970 0.985 rg 24 311 794 19 re f
+0.760 0.820 0.860 RG 0.35 w 24 311 m 818 311 l S
+0.560 0.200 0.160 rg BT /F1 5.9 Tf 1 0 0 1 28.0 320.0 Tm (MOCK_PEC_ATENDIMENTOS) Tj ET
+0.820 0.850 0.880 RG 0.3 w 24 330 m 24 311 l S
+0.560 0.200 0.160 rg BT /F1 5.9 Tf 1 0 0 1 167.0 320.0 Tm (raca_cor) Tj ET
+0.820 0.850 0.880 RG 0.3 w 163 330 m 163 311 l S
+0.560 0.200 0.160 rg BT /F1 5.9 Tf 1 0 0 1 305.0 320.0 Tm (TEXT) Tj ET
+0.820 0.850 0.880 RG 0.3 w 301 330 m 301 311 l S
+0.560 0.200 0.160 rg BT /F1 5.9 Tf 1 0 0 1 416.0 320.0 Tm (-) Tj ET
+0.820 0.850 0.880 RG 0.3 w 412 330 m 412 311 l S
+0.560 0.200 0.160 rg BT /F1 5.9 Tf 1 0 0 1 612.0 320.0 Tm (Raca/cor simulada; pode estar sem preenchimento.) Tj ET
+0.820 0.850 0.880 RG 0.3 w 608 330 m 608 311 l S
+1.000 1.000 1.000 rg 24 292 794 19 re f
+0.760 0.820 0.860 RG 0.35 w 24 292 m 818 292 l S
+0.560 0.200 0.160 rg BT /F1 5.9 Tf 1 0 0 1 28.0 301.0 Tm (MOCK_PEC_ATENDIMENTOS) Tj ET
+0.820 0.850 0.880 RG 0.3 w 24 311 m 24 292 l S
+0.560 0.200 0.160 rg BT /F1 5.9 Tf 1 0 0 1 167.0 301.0 Tm (deficiencia_tipo) Tj ET
+0.820 0.850 0.880 RG 0.3 w 163 311 m 163 292 l S
+0.560 0.200 0.160 rg BT /F1 5.9 Tf 1 0 0 1 305.0 301.0 Tm (TEXT) Tj ET
+0.820 0.850 0.880 RG 0.3 w 301 311 m 301 292 l S
+0.560 0.200 0.160 rg BT /F1 5.9 Tf 1 0 0 1 416.0 301.0 Tm (-) Tj ET
+0.820 0.850 0.880 RG 0.3 w 412 311 m 412 292 l S
+0.560 0.200 0.160 rg BT /F1 5.9 Tf 1 0 0 1 612.0 301.0 Tm (Tipo simulado ou indicacao Nenhuma; pode estar vazio.) Tj ET
+0.820 0.850 0.880 RG 0.3 w 608 311 m 608 292 l S
+0.940 0.970 0.985 rg 24 273 794 19 re f
+0.760 0.820 0.860 RG 0.35 w 24 273 m 818 273 l S
+0.560 0.200 0.160 rg BT /F1 5.9 Tf 1 0 0 1 28.0 282.0 Tm (MOCK_PEC_ATENDIMENTOS) Tj ET
+0.820 0.850 0.880 RG 0.3 w 24 292 m 24 273 l S
+0.560 0.200 0.160 rg BT /F1 5.9 Tf 1 0 0 1 167.0 282.0 Tm (deseja_informar_orientacao_sexual) Tj ET
+0.820 0.850 0.880 RG 0.3 w 163 292 m 163 273 l S
+0.560 0.200 0.160 rg BT /F1 5.9 Tf 1 0 0 1 305.0 282.0 Tm (TEXT) Tj ET
+0.820 0.850 0.880 RG 0.3 w 301 292 m 301 273 l S
+0.560 0.200 0.160 rg BT /F1 5.9 Tf 1 0 0 1 416.0 282.0 Tm (-) Tj ET
+0.820 0.850 0.880 RG 0.3 w 412 292 m 412 273 l S
+0.560 0.200 0.160 rg BT /F1 5.9 Tf 1 0 0 1 612.0 282.0 Tm (Resposta simulada sobre informar orientacao sexual.) Tj ET
+0.820 0.850 0.880 RG 0.3 w 608 292 m 608 273 l S
+1.000 1.000 1.000 rg 24 254 794 19 re f
+0.760 0.820 0.860 RG 0.35 w 24 254 m 818 254 l S
+0.560 0.200 0.160 rg BT /F1 5.9 Tf 1 0 0 1 28.0 263.0 Tm (MOCK_PEC_ATENDIMENTOS) Tj ET
+0.820 0.850 0.880 RG 0.3 w 24 273 m 24 254 l S
+0.560 0.200 0.160 rg BT /F1 5.9 Tf 1 0 0 1 167.0 263.0 Tm (orientacao_sexual) Tj ET
+0.820 0.850 0.880 RG 0.3 w 163 273 m 163 254 l S
+0.560 0.200 0.160 rg BT /F1 5.9 Tf 1 0 0 1 305.0 263.0 Tm (TEXT) Tj ET
+0.820 0.850 0.880 RG 0.3 w 301 273 m 301 254 l S
+0.560 0.200 0.160 rg BT /F1 5.9 Tf 1 0 0 1 416.0 263.0 Tm (-) Tj ET
+0.820 0.850 0.880 RG 0.3 w 412 273 m 412 254 l S
+0.560 0.200 0.160 rg BT /F1 5.9 Tf 1 0 0 1 612.0 263.0 Tm (Categoria simulada de orientacao sexual; pode estar vazia.) Tj ET
+0.820 0.850 0.880 RG 0.3 w 608 273 m 608 254 l S
+0.940 0.970 0.985 rg 24 235 794 19 re f
+0.760 0.820 0.860 RG 0.35 w 24 235 m 818 235 l S
+0.560 0.200 0.160 rg BT /F1 5.9 Tf 1 0 0 1 28.0 244.0 Tm (MOCK_PEC_ATENDIMENTOS) Tj ET
+0.820 0.850 0.880 RG 0.3 w 24 254 m 24 235 l S
+0.560 0.200 0.160 rg BT /F1 5.9 Tf 1 0 0 1 167.0 244.0 Tm (deseja_informar_identidade_genero) Tj ET
+0.820 0.850 0.880 RG 0.3 w 163 254 m 163 235 l S
+0.560 0.200 0.160 rg BT /F1 5.9 Tf 1 0 0 1 305.0 244.0 Tm (TEXT) Tj ET
+0.820 0.850 0.880 RG 0.3 w 301 254 m 301 235 l S
+0.560 0.200 0.160 rg BT /F1 5.9 Tf 1 0 0 1 416.0 244.0 Tm (-) Tj ET
+0.820 0.850 0.880 RG 0.3 w 412 254 m 412 235 l S
+0.560 0.200 0.160 rg BT /F1 5.9 Tf 1 0 0 1 612.0 244.0 Tm (Resposta simulada sobre informar identidade de genero.) Tj ET
+0.820 0.850 0.880 RG 0.3 w 608 254 m 608 235 l S
+1.000 1.000 1.000 rg 24 216 794 19 re f
+0.760 0.820 0.860 RG 0.35 w 24 216 m 818 216 l S
+0.560 0.200 0.160 rg BT /F1 5.9 Tf 1 0 0 1 28.0 225.0 Tm (MOCK_PEC_ATENDIMENTOS) Tj ET
+0.820 0.850 0.880 RG 0.3 w 24 235 m 24 216 l S
+0.560 0.200 0.160 rg BT /F1 5.9 Tf 1 0 0 1 167.0 225.0 Tm (identidade_genero) Tj ET
+0.820 0.850 0.880 RG 0.3 w 163 235 m 163 216 l S
+0.560 0.200 0.160 rg BT /F1 5.9 Tf 1 0 0 1 305.0 225.0 Tm (TEXT) Tj ET
+0.820 0.850 0.880 RG 0.3 w 301 235 m 301 216 l S
+0.560 0.200 0.160 rg BT /F1 5.9 Tf 1 0 0 1 416.0 225.0 Tm (-) Tj ET
+0.820 0.850 0.880 RG 0.3 w 412 235 m 412 216 l S
+0.560 0.200 0.160 rg BT /F1 5.9 Tf 1 0 0 1 612.0 225.0 Tm (Categoria simulada de identidade de genero; pode estar vazia.) Tj ET
+0.820 0.850 0.880 RG 0.3 w 608 235 m 608 216 l S
+0.940 0.970 0.985 rg 24 197 794 19 re f
+0.760 0.820 0.860 RG 0.35 w 24 197 m 818 197 l S
+0.560 0.200 0.160 rg BT /F1 5.9 Tf 1 0 0 1 28.0 206.0 Tm (MOCK_PEC_ATENDIMENTOS) Tj ET
+0.820 0.850 0.880 RG 0.3 w 24 216 m 24 197 l S
+0.560 0.200 0.160 rg BT /F1 5.9 Tf 1 0 0 1 167.0 206.0 Tm (nome_social) Tj ET
+0.820 0.850 0.880 RG 0.3 w 163 216 m 163 197 l S
+0.560 0.200 0.160 rg BT /F1 5.9 Tf 1 0 0 1 305.0 206.0 Tm (TEXT) Tj ET
+0.820 0.850 0.880 RG 0.3 w 301 216 m 301 197 l S
+0.560 0.200 0.160 rg BT /F1 5.9 Tf 1 0 0 1 416.0 206.0 Tm (-) Tj ET
+0.820 0.850 0.880 RG 0.3 w 412 216 m 412 197 l S
+0.560 0.200 0.160 rg BT /F1 5.9 Tf 1 0 0 1 612.0 206.0 Tm (Indicacao simulada de preenchimento de nome social.) Tj ET
+0.820 0.850 0.880 RG 0.3 w 608 216 m 608 197 l S
+0.560 0.670 0.760 RG 0.6 w 24 504 m 24 197 l S
+0.560 0.670 0.760 RG 0.6 w 818 504 m 818 197 l S
+0.340 0.400 0.450 rg BT /F1 6.2 Tf 1 0 0 1 24.0 27.0 Tm (Todos os campos de MOCK_PEC_ATENDIMENTOS sao ficticios/simulados.) Tj ET
+endstream
+endobj
+16 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 842 595] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 15 0 R >>
+endobj
+xref
+0 17
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000155 00000 n 
+0000000252 00000 n 
+0000000354 00000 n 
+0000005088 00000 n 
+0000005224 00000 n 
+0000010698 00000 n 
+0000010834 00000 n 
+0000014391 00000 n 
+0000014528 00000 n 
+0000028250 00000 n 
+0000028388 00000 n 
+0000036343 00000 n 
+0000036481 00000 n 
+0000049113 00000 n 
+trailer
+<< /Size 17 /Root 1 0 R >>
+startxref
+49251
+%%EOF

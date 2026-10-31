@@ -9,3 +9,6 @@ streamlit
 plotly
 folium
 streamlit-folium
+geopandas
+python-pptx
+scikit-learn

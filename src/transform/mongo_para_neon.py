@@ -11,8 +11,7 @@ NEON_DATABASE_URL = os.getenv("NEON_DATABASE_URL")
 NOME_BANCO_MONGO = "bronze_equidade_saude"
 
 DDL_TABELAS = """
-DROP TABLE IF EXISTS unidades_saude CASCADE;
-CREATE TABLE unidades_saude (
+CREATE TABLE IF NOT EXISTS unidades_saude (
     cnes                    TEXT PRIMARY KEY,
     nome_fantasia           TEXT,
     nome_empresarial        TEXT,
@@ -26,8 +25,7 @@ CREATE TABLE unidades_saude (
     tipo_estabelecimento    TEXT
 );
 
-DROP TABLE IF EXISTS equipes_saude;
-CREATE TABLE equipes_saude (
+CREATE TABLE IF NOT EXISTS equipes_saude (
     codigo_equipe   TEXT PRIMARY KEY,
     nome_equipe     TEXT,
     tipo_equipe     TEXT,
@@ -36,15 +34,13 @@ CREATE TABLE equipes_saude (
     data_desativacao TEXT
 );
 
-DROP TABLE IF EXISTS censo_raca_cor;
-CREATE TABLE censo_raca_cor (
+CREATE TABLE IF NOT EXISTS censo_raca_cor (
     raca_cor    TEXT PRIMARY KEY,
     populacao   BIGINT,
     ano         INTEGER
 );
 
-DROP TABLE IF EXISTS censo_deficiencia;
-CREATE TABLE censo_deficiencia (
+CREATE TABLE IF NOT EXISTS censo_deficiencia (
     tipo_dificuldade    TEXT PRIMARY KEY,
     populacao           BIGINT,
     ano                 INTEGER,
@@ -131,11 +127,14 @@ def inserir_linhas(engine, tabela, linhas):
     if not linhas:
         print(f"  nenhuma linha para inserir em '{tabela}'")
         return
-    colunas = linhas[0].keys()
+    colunas = list(linhas[0].keys())
     placeholders = ", ".join(f":{c}" for c in colunas)
+    atualizacoes = ", ".join(
+        f"{coluna} = EXCLUDED.{coluna}" for coluna in colunas[1:]
+    )
     sql = text(
         f"INSERT INTO {tabela} ({', '.join(colunas)}) VALUES ({placeholders}) "
-        f"ON CONFLICT DO NOTHING"
+        f"ON CONFLICT ({colunas[0]}) DO UPDATE SET {atualizacoes}"
     )
     with engine.begin() as conexao:
         conexao.execute(sql, linhas)
@@ -143,6 +142,13 @@ def inserir_linhas(engine, tabela, linhas):
 
 
 if __name__ == "__main__":
+    if not MONGO_URI:
+        raise SystemExit("Configure MONGO_URI no arquivo .env para acessar o MongoDB.")
+    if not NEON_DATABASE_URL:
+        raise SystemExit(
+            "Configure NEON_DATABASE_URL no arquivo .env para acessar o Neon."
+        )
+
     cliente_mongo = MongoClient(MONGO_URI)
     banco_mongo = cliente_mongo[NOME_BANCO_MONGO]
 

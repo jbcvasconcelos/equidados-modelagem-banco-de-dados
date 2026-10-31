@@ -50,6 +50,8 @@ IDENTIDADE_GENERO_PESOS = [46, 46, 2, 2, 2, 2]
 
 PROFISSIONAL_TIPOS = ["ACS", "Enfermeiro", "Médico"]
 PROFISSIONAL_PESOS = [60, 25, 15]
+TURNOS_ATENDIMENTO = ["Manhã", "Tarde", "Noite"]
+TURNOS_PESOS = [45, 45, 10]
 
 # ACS pergunta/preenche menos que Enfermeiro/Médico — é a dor relatada pela
 # Secretaria, e precisa estar de fato no dado simulado (não só no discurso),
@@ -163,6 +165,9 @@ def gerar_atendimento(id_atendimento, equipe, taxas, mes_index, mes):
         "data_atendimento": data_atendimento,
         "tipo_atendimento": random.choices(["Primeira consulta", "Retorno"], weights=[35, 65])[0],
         "profissional_tipo": profissional_tipo,
+        "turno_atendimento": random.choices(
+            TURNOS_ATENDIMENTO, weights=TURNOS_PESOS
+        )[0],
         "idade": idade,
         "raca_cor": raca_cor,
         "deficiencia_tipo": deficiencia_tipo,
@@ -186,11 +191,21 @@ def gerar_populacao_negra_distrito(equipes):
 
 
 if __name__ == "__main__":
+    if not NEON_DATABASE_URL:
+        raise SystemExit(
+            "Configure NEON_DATABASE_URL no arquivo .env para acessar o Neon."
+        )
+
     engine = create_engine(NEON_DATABASE_URL)
 
     print("Buscando equipes ESF ativas no Neon...")
     equipes = buscar_equipes_esf(engine)
     print(f"  {len(equipes)} equipes encontradas.")
+    if not equipes:
+        raise RuntimeError(
+            "Nenhuma equipe ESF ativa com distrito foi encontrada no Neon; "
+            "não é possível gerar os dados simulados."
+        )
 
     taxas_por_equipe = gerar_taxas_por_equipe(equipes)
 

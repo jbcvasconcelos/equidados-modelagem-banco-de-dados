@@ -39,11 +39,17 @@ def carregar_ids_que_atendem_sus():
 
 def buscar_detalhe(id_estabelecimento):
     url = URL_DETALHE.format(id=id_estabelecimento)
-    resposta = requests.get(url, headers=HEADERS, timeout=30)
-    resposta.raise_for_status()
-    dados = resposta.json()
-    # a API pode devolver uma lista com 1 item ou o objeto direto — cobre os dois casos
-    return dados[0] if isinstance(dados, list) else dados
+    for tentativa in range(3):
+        try:
+            resposta = requests.get(url, headers=HEADERS, timeout=30)
+            resposta.raise_for_status()
+            dados = resposta.json()
+            # a API pode devolver uma lista com 1 item ou o objeto direto
+            return dados[0] if isinstance(dados, list) else dados
+        except requests.RequestException:
+            if tentativa == 2:
+                raise
+            time.sleep(tentativa + 1)
 
 
 def salvar_json(dados, nome_arquivo):
@@ -59,13 +65,21 @@ if __name__ == "__main__":
     print(f"{len(ids)} estabelecimentos que atendem SUS. Buscando detalhes...")
 
     detalhes = []
+    falhas = []
     for indice, id_estabelecimento in enumerate(ids, start=1):
         print(f"[{indice}/{len(ids)}] {id_estabelecimento}")
         try:
             detalhes.append(buscar_detalhe(id_estabelecimento))
         except requests.RequestException as erro:
             print(f"  Falhou: {erro}")
+            falhas.append(id_estabelecimento)
         time.sleep(0.3)  # não bombardear a API do CNES
+
+    if falhas:
+        raise RuntimeError(
+            f"Coleta incompleta: {len(falhas)} de {len(ids)} detalhes falharam. "
+            "Nenhum arquivo de detalhes foi salvo."
+        )
 
     data_hoje = datetime.now(timezone.utc).strftime("%Y-%m-%d")
     nome_arquivo = f"estabelecimentos_detalhe_recife_{data_hoje}.json"

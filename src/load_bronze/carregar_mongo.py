@@ -48,6 +48,12 @@ def inserir_no_mongo(banco, colecao, dados, nome_arquivo):
     else:
         documentos = dados
 
+    if not documentos:
+        raise ValueError(
+            f"Arquivo '{nome_arquivo}' não contém documentos; "
+            f"a coleção '{colecao}' não será apagada."
+        )
+
     for documento in documentos:
         documento["_meta"] = {
             "arquivo_origem": nome_arquivo,
@@ -64,6 +70,9 @@ def inserir_no_mongo(banco, colecao, dados, nome_arquivo):
 
 
 if __name__ == "__main__":
+    if not MONGO_URI:
+        raise SystemExit("Configure MONGO_URI no arquivo .env para acessar o MongoDB.")
+
     cliente = MongoClient(MONGO_URI)
     banco = cliente[NOME_BANCO]
 

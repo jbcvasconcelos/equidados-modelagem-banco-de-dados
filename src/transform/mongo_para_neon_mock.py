@@ -19,8 +19,7 @@ NEON_DATABASE_URL = os.getenv("NEON_DATABASE_URL")
 NOME_BANCO_MONGO = "bronze_equidade_saude"
 
 DDL_TABELAS = """
-DROP TABLE IF EXISTS mock_pec_atendimentos CASCADE;
-CREATE TABLE mock_pec_atendimentos (
+CREATE TABLE IF NOT EXISTS mock_pec_atendimentos (
     id_atendimento                      INTEGER PRIMARY KEY,
     codigo_equipe                       TEXT REFERENCES equipes_saude(codigo_equipe),
     cnes_unidade                         TEXT REFERENCES unidades_saude(cnes),
@@ -28,6 +27,7 @@ CREATE TABLE mock_pec_atendimentos (
     data_atendimento                    DATE,
     tipo_atendimento                    TEXT,
     profissional_tipo                   TEXT,
+    turno_atendimento                   TEXT,
     idade                                INTEGER,
     raca_cor                            TEXT,
     deficiencia_tipo                    TEXT,
@@ -37,13 +37,14 @@ CREATE TABLE mock_pec_atendimentos (
     identidade_genero                   TEXT,
     nome_social                         TEXT
 );
+ALTER TABLE mock_pec_atendimentos
+    ADD COLUMN IF NOT EXISTS turno_atendimento TEXT;
 COMMENT ON TABLE mock_pec_atendimentos IS
     'DADOS FICTICIOS/SIMULADOS -- nao representam pacientes ou atendimentos '
     'reais. Gerados para testar o pipeline enquanto o acesso ao PEC/e-SUS real '
     'nao e liberado pela Secretaria.';
 
-DROP TABLE IF EXISTS mock_populacao_negra_distrito;
-CREATE TABLE mock_populacao_negra_distrito (
+CREATE TABLE IF NOT EXISTS mock_populacao_negra_distrito (
     distrito_sanitario_codigo      TEXT PRIMARY KEY,
     populacao_negra_pct_esperado   NUMERIC
 );
@@ -72,6 +73,7 @@ def transformar_mock_atendimentos(colecao):
             "data_atendimento": doc.get("data_atendimento"),
             "tipo_atendimento": doc.get("tipo_atendimento"),
             "profissional_tipo": doc.get("profissional_tipo"),
+            "turno_atendimento": doc.get("turno_atendimento"),
             "idade": doc.get("idade"),
             "raca_cor": doc.get("raca_cor"),
             "deficiencia_tipo": doc.get("deficiencia_tipo"),
@@ -110,9 +112,13 @@ def inserir_linhas(engine, tabela, linhas, tamanho_lote=1000):
                 valores_sql.append("(" + ", ".join(f":{n}" for n in nomes_params) + ")")
                 for coluna, nome_param in zip(colunas, nomes_params):
                     parametros[nome_param] = linha[coluna]
+            atualizacoes = ", ".join(
+                f"{coluna} = EXCLUDED.{coluna}" for coluna in colunas[1:]
+            )
             sql = text(
                 f"INSERT INTO {tabela} ({', '.join(colunas)}) VALUES "
-                f"{', '.join(valores_sql)} ON CONFLICT DO NOTHING"
+                f"{', '.join(valores_sql)} "
+                f"ON CONFLICT ({colunas[0]}) DO UPDATE SET {atualizacoes}"
             )
             conexao.execute(sql, parametros)
             total_inserido += len(lote)
@@ -120,6 +126,13 @@ def inserir_linhas(engine, tabela, linhas, tamanho_lote=1000):
 
 
 if __name__ == "__main__":
+    if not MONGO_URI:
+        raise SystemExit("Configure MONGO_URI no arquivo .env para acessar o MongoDB.")
+    if not NEON_DATABASE_URL:
+        raise SystemExit(
+            "Configure NEON_DATABASE_URL no arquivo .env para acessar o Neon."
+        )
+
     cliente_mongo = MongoClient(MONGO_URI)
     banco_mongo = cliente_mongo[NOME_BANCO_MONGO]
 

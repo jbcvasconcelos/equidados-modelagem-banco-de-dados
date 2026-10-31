@@ -1,10 +1,12 @@
 import os
 import re
+import unicodedata
 from decimal import Decimal
 
 import ollama
 from dotenv import load_dotenv
 from sqlalchemy import create_engine, text
+from sqlalchemy.exc import ProgrammingError
 
 load_dotenv()
 
@@ -291,13 +293,57 @@ SQL: SELECT COUNT(*) FROM mock_pec_atendimentos WHERE idade < 10;
 """
 
 
-def gerar_sql(pergunta):
+def gerar_sql_contagem_simples(pergunta):
+    normalizada = unicodedata.normalize("NFKD", pergunta.casefold())
+    normalizada = "".join(
+        caractere for caractere in normalizada
+        if not unicodedata.combining(caractere)
+    )
+    pede_contagem = (
+        re.search(r"\bquantas?\b", normalizada)
+        or re.search(r"\bnumero de\b", normalizada)
+        or re.search(r"\btotal\b", normalizada)
+        or re.search(r"\bao todo\b", normalizada)
+    )
+    pede_total_simples = not re.search(
+        r"\b(por|cada|ranking|distrito|bairro|tipo|ativa|desativada)\b",
+        normalizada,
+    )
+    if (
+        pede_contagem
+        and pede_total_simples
+        and re.search(r"\bunidades? de saude\b", normalizada)
+    ):
+        return "SELECT COUNT(*) FROM unidades_saude;"
+    return None
+
+
+def gerar_sql(pergunta, erro_anterior=None):
+    sql_deterministico = gerar_sql_contagem_simples(pergunta)
+    if sql_deterministico:
+        return sql_deterministico
+
+    correcao = ""
+    if erro_anterior:
+        sql_anterior, mensagem_erro = erro_anterior
+        correcao = f"""
+
+A tentativa anterior não foi aceita pelo PostgreSQL.
+SQL anterior: {sql_anterior}
+Erro retornado: {mensagem_erro}
+Gere uma consulta corrigida, usando somente tabelas e colunas declaradas
+no esquema acima. Não invente nomes de colunas.
+"""
+
     prompt = f"""{ESQUEMA_BANCO}
 
 Escreva APENAS um comando SQL (PostgreSQL) que responda à pergunta abaixo.
-Não escreva explicações, não use blocos de markdown, escreva somente o SQL puro.
+Use somente tabelas e colunas declaradas no esquema. Não invente nomes de
+colunas. Não escreva explicações, não use blocos de markdown, escreva somente
+o SQL puro.
 
 Pergunta: {pergunta}
+{correcao}
 SQL:"""
 
     resposta = ollama.chat(
@@ -318,6 +364,7 @@ def rodar_sql(sql):
 
     engine = create_engine(NEON_DATABASE_URL)
     with engine.connect() as conexao:
+        conexao.exec_driver_sql("SET TRANSACTION READ ONLY")
         resultado = conexao.execute(text(sql))
         linhas = resultado.fetchall()
         colunas = resultado.keys()
@@ -367,10 +414,21 @@ Frase:"""
 
 
 def responder_pergunta(pergunta):
-    sql = gerar_sql(pergunta)
-    print(f"[SQL gerado pelo modelo]: {sql}\n")
+    erro_anterior = None
+    for tentativa in range(2):
+        sql = gerar_sql(pergunta, erro_anterior)
+        print(f"[SQL gerado pelo modelo]: {sql}\n")
+        try:
+            colunas, linhas = rodar_sql(sql)
+            break
+        except ProgrammingError as erro:
+            if tentativa == 1:
+                raise ValueError(
+                    "O assistente não conseguiu gerar uma consulta válida "
+                    "para essa pergunta. Tente reformulá-la."
+                ) from erro
+            erro_anterior = (sql, str(erro.orig))
 
-    colunas, linhas = rodar_sql(sql)
     resposta = gerar_resposta_em_texto(pergunta, colunas, linhas)
 
     if "mock_" in sql.lower():

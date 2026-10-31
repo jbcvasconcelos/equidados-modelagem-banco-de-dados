@@ -1,0 +1,98 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [6 0 R 8 0 R] /Count 2 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+5 0 obj
+<< /Length 2839 >>
+stream
+0.150 0.380 0.550 rg BT /F2 8 Tf 1 0 0 1 28.0 561.0 Tm (EQUidados | ESQUEMA RELACIONAL) Tj ET
+0.090 0.240 0.380 rg BT /F2 18 Tf 1 0 0 1 28.0 536.0 Tm (Tabelas territoriais e referencias) Tj ET
+0.350 0.410 0.460 rg BT /F1 8 Tf 1 0 0 1 28.0 518.0 Tm (Atributos sublinhados sao chaves primarias; referencias estrangeiras aparecem com FK.) Tj ET
+0.780 0.830 0.870 RG 0.6 w 28 507 m 814 507 l S
+0.360 0.420 0.470 rg BT /F1 7 Tf 1 0 0 1 28.0 19.0 Tm (PK = chave primaria | FK = chave estrangeira | -> indica a tabela/coluna referenciada) Tj ET
+0.360 0.420 0.470 rg BT /F1 7 Tf 1 0 0 1 794.0 19.0 Tm (1) Tj ET
+0.970 0.985 0.995 rg 0.660 0.750 0.820 RG 0.8 w 28 412 480 75 re B
+0.100 0.310 0.490 rg 0.100 0.310 0.490 RG 0.5 w 28 462 480 25 re B
+1.000 1.000 1.000 rg BT /F2 9.2 Tf 1 0 0 1 38.0 470.0 Tm (UNIDADES_SAUDE) Tj ET
+0.120 0.180 0.250 rg BT /F1 9 Tf 1 0 0 1 39.0 445.0 Tm (\(cnes PK, nome_fantasia, nome_empresarial, bairro, distrito_sanitario_codigo,) Tj ET
+0.120 0.180 0.250 rg BT /F1 9 Tf 1 0 0 1 39.0 431.0 Tm (distrito_sanitario_nome, endereco, cep, latitude, longitude, tipo_estabelecimento\)) Tj ET
+0.970 0.985 0.995 rg 0.660 0.750 0.820 RG 0.8 w 28 325 480 75 re B
+0.100 0.310 0.490 rg 0.100 0.310 0.490 RG 0.5 w 28 375 480 25 re B
+1.000 1.000 1.000 rg BT /F2 9.2 Tf 1 0 0 1 38.0 383.0 Tm (EQUIPES_SAUDE) Tj ET
+0.120 0.180 0.250 rg BT /F1 9 Tf 1 0 0 1 39.0 358.0 Tm (\(codigo_equipe PK, nome_equipe, tipo_equipe, cnes_unidade FK -> UNIDADES_SAUDE\(cnes\),) Tj ET
+0.120 0.180 0.250 rg BT /F1 9 Tf 1 0 0 1 39.0 344.0 Tm (data_ativacao, data_desativacao\)) Tj ET
+0.970 0.985 0.995 rg 0.660 0.750 0.820 RG 0.8 w 525 426.4 289 60.6 re B
+0.100 0.310 0.490 rg 0.100 0.310 0.490 RG 0.5 w 525 462 289 25 re B
+1.000 1.000 1.000 rg BT /F2 9.2 Tf 1 0 0 1 535.0 470.0 Tm (CENSO_RACA_COR) Tj ET
+0.120 0.180 0.250 rg BT /F1 8.6 Tf 1 0 0 1 536.0 445.0 Tm (\(raca_cor PK, populacao, ano\)) Tj ET
+0.970 0.985 0.995 rg 0.660 0.750 0.820 RG 0.8 w 525 353.79999999999995 289 60.6 re B
+0.100 0.310 0.490 rg 0.100 0.310 0.490 RG 0.5 w 525 389.4 289 25 re B
+1.000 1.000 1.000 rg BT /F2 9.2 Tf 1 0 0 1 535.0 397.4 Tm (CENSO_DEFICIENCIA) Tj ET
+0.120 0.180 0.250 rg BT /F1 8.6 Tf 1 0 0 1 536.0 372.4 Tm (\(tipo_dificuldade PK, populacao, ano, e_total\)) Tj ET
+0.120 0.340 0.490 rg BT /F2 8 Tf 1 0 0 1 525.0 237.0 Tm (Relacionamento entre as tabelas:) Tj ET
+0.120 0.180 0.250 rg BT /F1 7.7 Tf 1 0 0 1 525.0 218.0 Tm (UNIDADES_SAUDE 1:N EQUIPES_SAUDE) Tj ET
+0.120 0.180 0.250 rg BT /F1 7.7 Tf 1 0 0 1 525.0 201.0 Tm (A FK cnes_unidade referencia cnes.) Tj ET
+0.120 0.180 0.250 rg BT /F1 7.7 Tf 1 0 0 1 525.0 184.0 Tm (CENSO_RACA_COR e CENSO_DEFICIENCIA) Tj ET
+0.120 0.180 0.250 rg BT /F1 7.7 Tf 1 0 0 1 525.0 167.0 Tm (sao tabelas de referencia independentes) Tj ET
+0.120 0.180 0.250 rg BT /F1 7.7 Tf 1 0 0 1 525.0 150.0 Tm (no esquema relacional atual.) Tj ET
+endstream
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 842 595] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 5 0 R >>
+endobj
+7 0 obj
+<< /Length 2409 >>
+stream
+0.150 0.380 0.550 rg BT /F2 8 Tf 1 0 0 1 28.0 561.0 Tm (EQUidados | ESQUEMA RELACIONAL) Tj ET
+0.090 0.240 0.380 rg BT /F2 18 Tf 1 0 0 1 28.0 536.0 Tm (Tabelas de atendimentos e referencia simulada) Tj ET
+0.350 0.410 0.460 rg BT /F1 8 Tf 1 0 0 1 28.0 518.0 Tm (Estas relacoes contem dados ficticios; nao representam pacientes nem estatisticas reais.) Tj ET
+0.780 0.830 0.870 RG 0.6 w 28 507 m 814 507 l S
+0.360 0.420 0.470 rg BT /F1 7 Tf 1 0 0 1 28.0 19.0 Tm (PK = chave primaria | FK = chave estrangeira | -> indica a tabela/coluna referenciada) Tj ET
+0.360 0.420 0.470 rg BT /F1 7 Tf 1 0 0 1 794.0 19.0 Tm (2) Tj ET
+0.970 0.985 0.995 rg 0.660 0.750 0.820 RG 0.8 w 28 380.4 786 89.6 re B
+0.100 0.310 0.490 rg 0.100 0.310 0.490 RG 0.5 w 28 445 786 25 re B
+1.000 1.000 1.000 rg BT /F2 9.2 Tf 1 0 0 1 38.0 453.0 Tm (MOCK_PEC_ATENDIMENTOS) Tj ET
+1.000 0.910 0.720 rg BT /F2 6.6 Tf 1 0 0 1 684.0 453.0 Tm (DADOS SIMULADOS) Tj ET
+0.120 0.180 0.250 rg BT /F1 9.2 Tf 1 0 0 1 39.0 428.0 Tm (\(id_atendimento PK, codigo_equipe FK -> EQUIPES_SAUDE\(codigo_equipe\), cnes_unidade FK -> UNIDADES_SAUDE\(cnes\), distrito_sanitario_codigo, data_atendimento,) Tj ET
+0.120 0.180 0.250 rg BT /F1 9.2 Tf 1 0 0 1 39.0 413.8 Tm (tipo_atendimento, profissional_tipo, idade, raca_cor, deficiencia_tipo, deseja_informar_orientacao_sexual, orientacao_sexual,) Tj ET
+0.120 0.180 0.250 rg BT /F1 9.2 Tf 1 0 0 1 39.0 399.6 Tm (deseja_informar_identidade_genero, identidade_genero, nome_social\)) Tj ET
+0.970 0.985 0.995 rg 0.660 0.750 0.820 RG 0.8 w 28 203 786 62 re B
+0.100 0.310 0.490 rg 0.100 0.310 0.490 RG 0.5 w 28 240 786 25 re B
+1.000 1.000 1.000 rg BT /F2 9.2 Tf 1 0 0 1 38.0 248.0 Tm (MOCK_POPULACAO_NEGRA_DISTRITO) Tj ET
+1.000 0.910 0.720 rg BT /F2 6.6 Tf 1 0 0 1 684.0 248.0 Tm (REFERENCIA SIMULADA) Tj ET
+0.120 0.180 0.250 rg BT /F1 10 Tf 1 0 0 1 39.0 223.0 Tm (\(distrito_sanitario_codigo PK, populacao_negra_pct_esperado\)) Tj ET
+0.120 0.340 0.490 rg BT /F2 9 Tf 1 0 0 1 28.0 93.0 Tm (Relacionamentos dos atendimentos:) Tj ET
+0.120 0.180 0.250 rg BT /F1 8 Tf 1 0 0 1 28.0 72.0 Tm (MOCK_PEC_ATENDIMENTOS.codigo_equipe -> EQUIPES_SAUDE.codigo_equipe) Tj ET
+0.120 0.180 0.250 rg BT /F1 8 Tf 1 0 0 1 28.0 56.0 Tm (MOCK_PEC_ATENDIMENTOS.cnes_unidade -> UNIDADES_SAUDE.cnes) Tj ET
+0.120 0.180 0.250 rg BT /F1 8 Tf 1 0 0 1 28.0 40.0 Tm (MOCK_POPULACAO_NEGRA_DISTRITO nao possui FK para uma tabela de distritos no DDL atual.) Tj ET
+endstream
+endobj
+8 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 842 595] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 7 0 R >>
+endobj
+xref
+0 9
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000127 00000 n 
+0000000224 00000 n 
+0000000326 00000 n 
+0000003217 00000 n 
+0000003353 00000 n 
+0000005814 00000 n 
+trailer
+<< /Size 9 /Root 1 0 R >>
+startxref
+5950
+%%EOF

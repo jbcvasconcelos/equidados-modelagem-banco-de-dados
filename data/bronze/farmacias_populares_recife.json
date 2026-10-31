@@ -1,0 +1,370 @@
+{
+  "source_file": "cbf63cad-bb83-4752-95e1-9578b15f00a5.xlsx",
+  "description": "Farmacias da planilha fornecida pelo usuario; distrito associado pelo bairro com o mapeamento bairro-distrito do Recife. A planilha nao possui coordenadas.",
+  "records": [
+    {
+      "cnpj": "03704687000134",
+      "farmacia": "AEFARMA MEDICAMENTOS LTDA",
+      "endereco": "VINTE E SEIS DE JANEIRO",
+      "bairro": "PINA",
+      "distrito_sanitario_codigo": "06"
+    },
+    {
+      "cnpj": "09318374000124",
+      "farmacia": "ARRUDA & AZEVEDO COMERCIO DE MEDICAMENTOS LTDA",
+      "endereco": "DO ESPINHEIRO",
+      "bairro": "ESPINHEIRO",
+      "distrito_sanitario_codigo": "03"
+    },
+    {
+      "cnpj": "09537116000139",
+      "farmacia": "CAVALCANTI & BELTRAO COMERCIO DE PRODUTOS FARMACUTICOS LTDA. - ME",
+      "endereco": "CONSELHEIRO AGUIAR",
+      "bairro": "BOA VIAGEM",
+      "distrito_sanitario_codigo": "06"
+    },
+    {
+      "cnpj": "09480328000127",
+      "farmacia": "DROGARIA BURGUESA LTDA",
+      "endereco": "GENERAL SAN MARTIN",
+      "bairro": "SAN MARTIN",
+      "distrito_sanitario_codigo": "05"
+    },
+    {
+      "cnpj": "09011669000153",
+      "farmacia": "DROGARIA ESPERANCA DE MEDICAMENTOS LTDA - EPP",
+      "endereco": "CORONEL PACHECO",
+      "bairro": "VARZEA",
+      "distrito_sanitario_codigo": "04"
+    },
+    {
+      "cnpj": "10577369000115",
+      "farmacia": "DROGARIA POLIDORO LTDA - EPP",
+      "endereco": "GENERAL POLIDORO",
+      "bairro": "VARZEA",
+      "distrito_sanitario_codigo": "04"
+    },
+    {
+      "cnpj": "61412110035293",
+      "farmacia": "DROGARIA SAO PAULO S.A.",
+      "endereco": "CONDE DA BOA VISTA",
+      "bairro": "BOA VISTA",
+      "distrito_sanitario_codigo": "01"
+    },
+    {
+      "cnpj": "61412110066849",
+      "farmacia": "DROGARIA SAO PAULO S.A.",
+      "endereco": "CONSELHEIRO AGUIAR",
+      "bairro": "BOA VIAGEM",
+      "distrito_sanitario_codigo": "06"
+    },
+    {
+      "cnpj": "61412110049081",
+      "farmacia": "DROGARIA SAO PAULO S.A.",
+      "endereco": "ENGENHEIRO DOMINGOS FERREIRA",
+      "bairro": "BOA VIAGEM",
+      "distrito_sanitario_codigo": "06"
+    },
+    {
+      "cnpj": "61412110059800",
+      "farmacia": "DROGARIA SAO PAULO S.A.",
+      "endereco": "REAL DA TORRE",
+      "bairro": "MADALENA",
+      "distrito_sanitario_codigo": "04"
+    },
+    {
+      "cnpj": "06198619003820",
+      "farmacia": "DROGATIM DROGARIAS LTDA",
+      "endereco": "CONSELHEIRO ROSA E SILVA",
+      "bairro": "TAMARINEIRA",
+      "distrito_sanitario_codigo": "03"
+    },
+    {
+      "cnpj": "06198619004711",
+      "farmacia": "DROGATIM DROGARIAS LTDA",
+      "endereco": "DOS REMEDIOS",
+      "bairro": "AFOGADOS",
+      "distrito_sanitario_codigo": "05"
+    },
+    {
+      "cnpj": "08639146000193",
+      "farmacia": "EG MEDICAMENTOS LTDA",
+      "endereco": "GENERAL SAN MARTIN",
+      "bairro": "SAN MARTIN",
+      "distrito_sanitario_codigo": "05"
+    },
+    {
+      "cnpj": "06626253013563",
+      "farmacia": "EMPREENDIMENTOS PAGUE MENOS S.A.",
+      "endereco": "BARAO DE SOUZA LEAO",
+      "bairro": "BOA VIAGEM",
+      "distrito_sanitario_codigo": "06"
+    },
+    {
+      "cnpj": "06626253010548",
+      "farmacia": "EMPREENDIMENTOS PAGUE MENOS S.A.",
+      "endereco": "CONSELHEIRO AGUIAR",
+      "bairro": "BOA VIAGEM",
+      "distrito_sanitario_codigo": "06"
+    },
+    {
+      "cnpj": "06626253014101",
+      "farmacia": "EMPREENDIMENTOS PAGUE MENOS S.A.",
+      "endereco": "CONSELHEIRO ROSA E SILVA",
+      "bairro": "JAQUEIRA",
+      "distrito_sanitario_codigo": "03"
+    },
+    {
+      "cnpj": "06626253012249",
+      "farmacia": "EMPREENDIMENTOS PAGUE MENOS S.A.",
+      "endereco": "DEZESSETE DE AGOSTO",
+      "bairro": "SANTANA",
+      "distrito_sanitario_codigo": "03"
+    },
+    {
+      "cnpj": "06626253018794",
+      "farmacia": "EMPREENDIMENTOS PAGUE MENOS S.A.",
+      "endereco": "DEZESSETE DE AGOSTO",
+      "bairro": "PARNAMIRIM",
+      "distrito_sanitario_codigo": "03"
+    },
+    {
+      "cnpj": "06626253023283",
+      "farmacia": "EMPREENDIMENTOS PAGUE MENOS S.A.",
+      "endereco": "ENGENHEIRO DOMINGOS FERREIRA",
+      "bairro": "PINA",
+      "distrito_sanitario_codigo": "06"
+    },
+    {
+      "cnpj": "06626253022392",
+      "farmacia": "EMPREENDIMENTOS PAGUE MENOS S.A.",
+      "endereco": "GOMES TABORDA",
+      "bairro": "PRADO",
+      "distrito_sanitario_codigo": "04"
+    },
+    {
+      "cnpj": "06626253010629",
+      "farmacia": "EMPREENDIMENTOS PAGUE MENOS S.A.",
+      "endereco": "HERCULANO BANDEIRA",
+      "bairro": "PINA",
+      "distrito_sanitario_codigo": "06"
+    },
+    {
+      "cnpj": "06626253014705",
+      "farmacia": "EMPREENDIMENTOS PAGUE MENOS S.A.",
+      "endereco": "JEAN EMILE FAVRE",
+      "bairro": "IPSEP",
+      "distrito_sanitario_codigo": "06"
+    },
+    {
+      "cnpj": "06626253016406",
+      "farmacia": "EMPREENDIMENTOS PAGUE MENOS S.A.",
+      "endereco": "JOSE BONIFACIO",
+      "bairro": "TORRE",
+      "distrito_sanitario_codigo": "04"
+    },
+    {
+      "cnpj": "06626253011510",
+      "farmacia": "EMPREENDIMENTOS PAGUE MENOS S.A.",
+      "endereco": "PADRE LEMOS",
+      "bairro": "CASA AMARELA",
+      "distrito_sanitario_codigo": "03"
+    },
+    {
+      "cnpj": "06626253011862",
+      "farmacia": "EMPREENDIMENTOS PAGUE MENOS S.A.",
+      "endereco": "QUARENTA E OITO",
+      "bairro": "ESPINHEIRO",
+      "distrito_sanitario_codigo": "03"
+    },
+    {
+      "cnpj": "06626253019251",
+      "farmacia": "EMPREENDIMENTOS PAGUE MENOS S.A.",
+      "endereco": "RECIFE",
+      "bairro": "IPSEP",
+      "distrito_sanitario_codigo": "06"
+    },
+    {
+      "cnpj": "06626253053948",
+      "farmacia": "EMPREENDIMENTOS PAGUE MENOS S/A",
+      "endereco": "CAXANGA",
+      "bairro": "MADALENA",
+      "distrito_sanitario_codigo": "04"
+    },
+    {
+      "cnpj": "06626253013482",
+      "farmacia": "EMPREENDIMENTOS PAGUE MENOS S/A",
+      "endereco": "CONSELHEIRO AGUIAR",
+      "bairro": "BOA VIAGEM",
+      "distrito_sanitario_codigo": "06"
+    },
+    {
+      "cnpj": "06626253062181",
+      "farmacia": "EMPREENDIMENTOS PAGUE MENOS S/A",
+      "endereco": "DO ARRAIAL",
+      "bairro": "TAMARINEIRA",
+      "distrito_sanitario_codigo": "03"
+    },
+    {
+      "cnpj": "06626253037314",
+      "farmacia": "EMPREENDIMENTOS PAGUE MENOS S/A",
+      "endereco": "DOUTOR CARLOS CHAGAS",
+      "bairro": "SANTO AMARO",
+      "distrito_sanitario_codigo": "01"
+    },
+    {
+      "cnpj": "06626253056530",
+      "farmacia": "EMPREENDIMENTOS PAGUE MENOS S/A",
+      "endereco": "ENGENHEIRO DOMINGOS FERREIRA",
+      "bairro": "BOA VIAGEM",
+      "distrito_sanitario_codigo": "06"
+    },
+    {
+      "cnpj": "06626253037829",
+      "farmacia": "EMPREENDIMENTOS PAGUE MENOS S/A",
+      "endereco": "GENERAL JOAQUIM INACIO",
+      "bairro": "PAISSANDU",
+      "distrito_sanitario_codigo": "01"
+    },
+    {
+      "cnpj": "06626253059636",
+      "farmacia": "EMPREENDIMENTOS PAGUE MENOS S/A",
+      "endereco": "JOAO DE BARROS",
+      "bairro": "ESPINHEIRO",
+      "distrito_sanitario_codigo": "03"
+    },
+    {
+      "cnpj": "06626253059717",
+      "farmacia": "EMPREENDIMENTOS PAGUE MENOS S/A",
+      "endereco": "SILVEIRA LOBO",
+      "bairro": "POCO",
+      "distrito_sanitario_codigo": "03"
+    },
+    {
+      "cnpj": "04245679000130",
+      "farmacia": "FARMACIA BIS LTDA - ME",
+      "endereco": "CORACAO DE MARIA",
+      "bairro": "SAO JOSE",
+      "distrito_sanitario_codigo": "01"
+    },
+    {
+      "cnpj": "06133355000135",
+      "farmacia": "FARMACIA DIARIAMENTE COMERCIO LTDA",
+      "endereco": "BEBERIBE",
+      "bairro": "AGUA FRIA",
+      "distrito_sanitario_codigo": "02"
+    },
+    {
+      "cnpj": "07242460000175",
+      "farmacia": "FARMAPAULA LTDA - ME",
+      "endereco": "DOS REMEDIOS",
+      "bairro": "AFOGADOS",
+      "distrito_sanitario_codigo": "05"
+    },
+    {
+      "cnpj": "13145752000192",
+      "farmacia": "GV MEDICAMENTOS LTDA",
+      "endereco": "GENERAL SAN MARTIN",
+      "bairro": "SAN MARTIN",
+      "distrito_sanitario_codigo": "05"
+    },
+    {
+      "cnpj": "40843591000183",
+      "farmacia": "L M SILVA LTDA ME",
+      "endereco": "VASCO DA GAMA",
+      "bairro": "VASCO DA GAMA",
+      "distrito_sanitario_codigo": "08"
+    },
+    {
+      "cnpj": "03083096000278",
+      "farmacia": "LEONIL COMERCIO DE MEDICAMENTOS LTDA",
+      "endereco": "BLUMENAU",
+      "bairro": "IPSEP",
+      "distrito_sanitario_codigo": "06"
+    },
+    {
+      "cnpj": "14589349000115",
+      "farmacia": "M P NEVES MEDICAMENTOS LTDA - ME",
+      "endereco": "GUARARAPES",
+      "bairro": "SANTO ANTONIO",
+      "distrito_sanitario_codigo": "01"
+    },
+    {
+      "cnpj": "41066002000160",
+      "farmacia": "MARIA DO CARMO COLATINO DE BARROS ME",
+      "endereco": "RAIMUNDO DINIZ",
+      "bairro": "IPSEP",
+      "distrito_sanitario_codigo": "06"
+    },
+    {
+      "cnpj": "01084743000150",
+      "farmacia": "MARIA TEREZINHA PEREIRA JORDAO - ME",
+      "endereco": "NOVA DESCOBERTA",
+      "bairro": "CASA AMARELA",
+      "distrito_sanitario_codigo": "03"
+    },
+    {
+      "cnpj": "03740975000144",
+      "farmacia": "MONTE FARMA LTDA",
+      "endereco": "GENERAL JOAQUIM INACIO",
+      "bairro": "PAISSANDU",
+      "distrito_sanitario_codigo": "01"
+    },
+    {
+      "cnpj": "03740975000306",
+      "farmacia": "MONTE FARMA LTDA - ME",
+      "endereco": "CAXANGA",
+      "bairro": "IPUTINGA",
+      "distrito_sanitario_codigo": "04"
+    },
+    {
+      "cnpj": "61585865040455",
+      "farmacia": "RAIA DROGASIL S/A",
+      "endereco": "DOUTOR LULA CABRAL DE MELO",
+      "bairro": "PARNAMIRIM",
+      "distrito_sanitario_codigo": "03"
+    },
+    {
+      "cnpj": "61585865115722",
+      "farmacia": "RAIA DROGASIL S/A",
+      "endereco": "ENGENHEIRO DOMINGOS FERREIRA",
+      "bairro": "PINA",
+      "distrito_sanitario_codigo": "06"
+    },
+    {
+      "cnpj": "10956007000135",
+      "farmacia": "RB FARMACEUTICA LTDA - EPP",
+      "endereco": "CONSELHEIRO ROSA E SILVA",
+      "bairro": "TAMARINEIRA",
+      "distrito_sanitario_codigo": "03"
+    },
+    {
+      "cnpj": "01693953000226",
+      "farmacia": "VJ FARMA LTDA",
+      "endereco": "AV DA CONDE BOA 250",
+      "bairro": "BOA VISTA",
+      "distrito_sanitario_codigo": "01"
+    },
+    {
+      "cnpj": "01693953000730",
+      "farmacia": "VJ FARMA LTDA",
+      "endereco": "DOS REMEDIOS",
+      "bairro": "AFOGADOS",
+      "distrito_sanitario_codigo": "05"
+    },
+    {
+      "cnpj": "01693953000498",
+      "farmacia": "VJ FARMA LTDA",
+      "endereco": "ENGENHEIRO DOMINGOS FERREIRA",
+      "bairro": "BOA VIAGEM",
+      "distrito_sanitario_codigo": "06"
+    },
+    {
+      "cnpj": "01693953000145",
+      "farmacia": "VJ FARMA LTDA",
+      "endereco": "JOAQUIM NABUCO",
+      "bairro": "GRACAS",
+      "distrito_sanitario_codigo": "03"
+    }
+  ]
+}

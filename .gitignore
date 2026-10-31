@@ -4,3 +4,4 @@ __pycache__/
 *.pyc
 docs/
 data/bronze/mock_pec/*.json
+data/bronze/mock_pec/*.sqlite
