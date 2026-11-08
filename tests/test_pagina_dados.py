@@ -1,9 +1,12 @@
 import unittest
+from pathlib import Path
+import re
 
 from sqlalchemy import create_engine, text
 
 from src.dashboard.pagina_dados import (
     CONSULTAS,
+    CONSULTAS_AVANCADAS,
     TABELAS_CONSULTAVEIS,
     atualizar_atendimento,
     atualizar_referencia_distrito,
@@ -112,6 +115,56 @@ class PaginaDadosTests(unittest.TestCase):
         ]
         self.assertGreaterEqual(len(consultas_com_join), 1)
 
+    def test_disponibiliza_consultas_e_visoes_da_etapa_quatro(self):
+        self.assertEqual(len(CONSULTAS_AVANCADAS), 4)
+        consultas = list(CONSULTAS_AVANCADAS.values())
+        self.assertIn("LEFT JOIN", consultas[0]["sql"].upper())
+        self.assertIn("IS NULL", consultas[0]["sql"].upper())
+        self.assertIn("FULL OUTER JOIN", consultas[1]["sql"].upper())
+        self.assertIn("SELECT AVG(", consultas[2]["sql"].upper())
+        self.assertIn("SELECT 1.0 * COUNT(", consultas[3]["sql"].upper())
+        self.assertIn(
+            "vw_equidade_distrital",
+            {tabela for tabela, _ in TABELAS_CONSULTAVEIS.values()},
+        )
+        self.assertIn(
+            "vw_completude_por_equipe",
+            {tabela for tabela, _ in TABELAS_CONSULTAVEIS.values()},
+        )
+
+    def test_entregavel_sql_contem_indices_consultas_e_visoes_exigidos(self):
+        raiz = Path(__file__).resolve().parents[1]
+        sql = (raiz / "Etapa_04_Consultas_Avancadas.sql").read_text(
+            encoding="utf-8"
+        )
+        self.assertIn("idx_mock_atendimentos_equipe_data_etapa04", sql)
+        self.assertIn("idx_mock_atendimentos_data_distrito_etapa04", sql)
+
+        consultas = re.findall(r"-- CONSULTA \d+ -", sql)
+        self.assertEqual(len(consultas), 4)
+        self.assertIn("LEFT JOIN", sql.upper())
+        self.assertIn("IS NULL", sql.upper())
+        self.assertIn("FULL OUTER JOIN", sql.upper())
+        self.assertGreaterEqual(
+            len(re.findall(r"\bSELECT\b", sql[sql.index("-- CONSULTA 3"):].upper())),
+            4,
+        )
+
+        visao_distrital = sql.split(
+            "CREATE OR REPLACE VIEW vw_equidade_distrital AS", 1
+        )[1].split("COMMENT ON VIEW vw_equidade_distrital", 1)[0]
+        visao_equipe = sql.split(
+            "CREATE OR REPLACE VIEW vw_completude_por_equipe AS", 1
+        )[1].split("COMMENT ON VIEW vw_completude_por_equipe", 1)[0]
+        self.assertGreaterEqual(
+            len(re.findall(r"\b(?:LEFT|FULL|INNER)?\s*JOIN\b", visao_distrital, re.I)),
+            3,
+        )
+        self.assertGreaterEqual(
+            len(re.findall(r"\b(?:LEFT|FULL|INNER)?\s*JOIN\b", visao_equipe, re.I)),
+            3,
+        )
+
     def test_consulta_tabela_usa_lista_permitida_e_paginacao_parametrizada(self):
         tabela, chave = TABELAS_CONSULTAVEIS["Atendimentos simulados"]
         sql = montar_sql_consulta_tabela(tabela, limite=25, deslocamento=50)
@@ -119,7 +172,7 @@ class PaginaDadosTests(unittest.TestCase):
         self.assertIn(f'SELECT * FROM "{tabela}"', sql)
         self.assertIn(f'ORDER BY "{chave}"', sql)
         self.assertIn("LIMIT :limite OFFSET :deslocamento", sql)
-        self.assertEqual(len(TABELAS_CONSULTAVEIS), 6)
+        self.assertEqual(len(TABELAS_CONSULTAVEIS), 8)
 
     def test_consulta_tabela_rejeita_identificador_nao_permitido(self):
         with self.assertRaisesRegex(ValueError, "lista permitida"):

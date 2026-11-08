@@ -116,6 +116,131 @@ CONSULTAS = {
     },
 }
 
+CONSULTAS_AVANCADAS = {
+    "1. Anti join — equipes sem atendimento recente": {
+        "sql": """
+            SELECT e.codigo_equipe,
+                   e.nome_equipe,
+                   e.tipo_equipe,
+                   u.cnes AS cnes_unidade,
+                   COALESCE(u.nome_fantasia, u.nome_empresarial) AS unidade,
+                   u.distrito_sanitario_codigo
+            FROM equipes_saude e
+            LEFT JOIN unidades_saude u ON u.cnes = e.cnes_unidade
+            LEFT JOIN mock_pec_atendimentos a
+                ON a.codigo_equipe = e.codigo_equipe
+               AND a.data_atendimento >= CURRENT_DATE - INTERVAL '90 days'
+               AND a.data_atendimento <= CURRENT_DATE
+            WHERE NULLIF(BTRIM(e.data_desativacao), '') IS NULL
+              AND a.id_atendimento IS NULL
+            ORDER BY u.distrito_sanitario_codigo, e.codigo_equipe
+        """,
+        "tipo_grafico": "bar",
+        "colunas_numericas": [],
+    },
+    "2. Full outer join — estrutura CNES e atendimentos por distrito": {
+        "sql": """
+            WITH unidades_por_distrito AS (
+                SELECT distrito_sanitario_codigo,
+                       COUNT(DISTINCT cnes) AS total_unidades
+                FROM unidades_saude
+                WHERE distrito_sanitario_codigo IS NOT NULL
+                GROUP BY distrito_sanitario_codigo
+            ),
+            atendimentos_por_distrito AS (
+                SELECT distrito_sanitario_codigo,
+                       COUNT(*) AS atendimentos_ultimos_90_dias
+                FROM mock_pec_atendimentos
+                WHERE data_atendimento >= CURRENT_DATE - INTERVAL '90 days'
+                  AND data_atendimento < CURRENT_DATE + INTERVAL '1 day'
+                  AND distrito_sanitario_codigo IS NOT NULL
+                GROUP BY distrito_sanitario_codigo
+            )
+            SELECT COALESCE(u.distrito_sanitario_codigo,
+                            a.distrito_sanitario_codigo)
+                       AS distrito_sanitario_codigo,
+                   COALESCE(u.total_unidades, 0) AS total_unidades,
+                   COALESCE(a.atendimentos_ultimos_90_dias, 0)
+                       AS atendimentos_ultimos_90_dias,
+                   CASE
+                       WHEN u.distrito_sanitario_codigo IS NULL
+                           THEN 'Somente atendimentos simulados'
+                       WHEN a.distrito_sanitario_codigo IS NULL
+                           THEN 'Somente estrutura CNES'
+                       ELSE 'Estrutura CNES e atendimentos simulados'
+                   END AS origem_dos_registros
+            FROM unidades_por_distrito u
+            FULL OUTER JOIN atendimentos_por_distrito a
+                ON a.distrito_sanitario_codigo =
+                   u.distrito_sanitario_codigo
+            ORDER BY distrito_sanitario_codigo
+        """,
+        "tipo_grafico": "bar",
+        "colunas_numericas": [
+            "total_unidades",
+            "atendimentos_ultimos_90_dias",
+        ],
+    },
+    "3. Subconsulta — equipes acima da média de atendimentos": {
+        "sql": """
+            WITH atendimentos_por_equipe AS (
+                SELECT codigo_equipe, COUNT(*) AS total_atendimentos
+                FROM mock_pec_atendimentos
+                WHERE codigo_equipe IS NOT NULL
+                GROUP BY codigo_equipe
+            )
+            SELECT e.codigo_equipe,
+                   e.nome_equipe,
+                   COALESCE(u.nome_fantasia, u.nome_empresarial) AS unidade,
+                   a.total_atendimentos
+            FROM atendimentos_por_equipe a
+            JOIN equipes_saude e ON e.codigo_equipe = a.codigo_equipe
+            LEFT JOIN unidades_saude u ON u.cnes = e.cnes_unidade
+            WHERE a.total_atendimentos > (
+                SELECT AVG(media.total_atendimentos)
+                FROM atendimentos_por_equipe media
+            )
+            ORDER BY a.total_atendimentos DESC, e.codigo_equipe
+        """,
+        "tipo_grafico": "bar",
+        "colunas_numericas": ["total_atendimentos"],
+    },
+    "4. Subconsulta — proporção racial acima da média municipal": {
+        "sql": """
+            WITH atendimentos_por_distrito AS (
+                SELECT distrito_sanitario_codigo,
+                       COUNT(raca_cor) AS registros_com_raca_cor,
+                       COUNT(*) FILTER (
+                           WHERE raca_cor IN ('Preta', 'Parda')
+                       ) AS registros_pretos_ou_pardos
+                FROM mock_pec_atendimentos
+                WHERE distrito_sanitario_codigo IS NOT NULL
+                GROUP BY distrito_sanitario_codigo
+            )
+            SELECT distrito_sanitario_codigo,
+                   registros_com_raca_cor,
+                   registros_pretos_ou_pardos,
+                   ROUND(
+                       100.0 * registros_pretos_ou_pardos
+                           / NULLIF(registros_com_raca_cor, 0),
+                       1
+                   ) AS percentual_preto_ou_pardo_distrital
+            FROM atendimentos_por_distrito
+            WHERE registros_com_raca_cor > 0
+              AND 1.0 * registros_pretos_ou_pardos
+                      / registros_com_raca_cor > (
+                  SELECT 1.0 * COUNT(*) FILTER (
+                      WHERE raca_cor IN ('Preta', 'Parda')
+                  ) / NULLIF(COUNT(raca_cor), 0)
+                  FROM mock_pec_atendimentos
+              )
+            ORDER BY percentual_preto_ou_pardo_distrital DESC
+        """,
+        "tipo_grafico": "bar",
+        "colunas_numericas": ["percentual_preto_ou_pardo_distrital"],
+    },
+}
+
 TABELAS_CONSULTAVEIS = {
     "Unidades de saúde (CNES)": ("unidades_saude", "cnes"),
     "Equipes de saúde": ("equipes_saude", "codigo_equipe"),
@@ -125,6 +250,14 @@ TABELAS_CONSULTAVEIS = {
     "Referência simulada por distrito": (
         "mock_populacao_negra_distrito",
         "distrito_sanitario_codigo",
+    ),
+    "Visão avançada — equidade distrital": (
+        "vw_equidade_distrital",
+        "distrito_sanitario_codigo",
+    ),
+    "Visão avançada — completude por equipe": (
+        "vw_completude_por_equipe",
+        "codigo_equipe",
     ),
 }
 
@@ -588,66 +721,87 @@ def _renderizar_crud_referencias(consultar, engine):
                         st.warning("A referência selecionada não foi encontrada.")
 
 
+def _renderizar_resultado_consulta(consultar, definicao, chave):
+    resultado = consultar(definicao["sql"])
+    if resultado.empty:
+        st.info("A consulta não retornou resultados.")
+        return
+
+    for coluna in definicao["colunas_numericas"]:
+        resultado[coluna] = pd.to_numeric(resultado[coluna], errors="coerce")
+    st.dataframe(resultado, width="stretch", hide_index=True)
+    categoricas = resultado.select_dtypes(exclude="number").columns.tolist()
+    numericas = resultado.select_dtypes(include="number").columns.tolist()
+    if not categoricas or not numericas:
+        st.info("O resultado não contém colunas suficientes para gerar um gráfico.")
+        return
+
+    coluna_x = st.selectbox(
+        "Categoria do gráfico",
+        categoricas,
+        key=f"grafico_consulta_x_{chave}",
+    )
+    coluna_y = st.selectbox(
+        "Indicador do gráfico",
+        numericas,
+        key=f"grafico_consulta_y_{chave}",
+    )
+    if definicao["tipo_grafico"] == "line":
+        figura = px.line(
+            resultado, x=coluna_x, y=coluna_y, markers=True,
+            labels={coluna_x: coluna_x, coluna_y: coluna_y},
+        )
+    else:
+        figura = px.bar(
+            resultado,
+            x=coluna_x,
+            y=coluna_y,
+            color="raca_cor" if "raca_cor" in resultado.columns else None,
+            labels={coluna_x: coluna_x, coluna_y: coluna_y},
+        )
+    figura.update_layout(
+        template="plotly_white",
+        margin={"l": 10, "r": 10, "t": 30, "b": 10},
+    )
+    st.plotly_chart(figura, width="stretch")
+
+
 def _renderizar_consultas(consultar):
-    consultas_tab, tabelas_tab = st.tabs(
-        ["Consultas analíticas", "Consultar tabela do banco"]
+    consultas_tab, avancadas_tab, tabelas_tab = st.tabs(
+        [
+            "Consultas analíticas",
+            "Consultas avançadas — Etapa 04",
+            "Consultar tabela do banco",
+        ]
     )
     with consultas_tab:
         st.caption(
-            "Quatro consultas SQL predefinidas, incluindo junções entre "
-            "tabelas. Os resultados podem ser visualizados em tabela e gráfico."
+            "Consultas SQL da etapa inicial, com resultados em tabela e gráfico."
         )
         consulta_selecionada = st.selectbox(
             "Consulta", list(CONSULTAS), key="consulta_sql_equidados",
         )
         definicao = CONSULTAS[consulta_selecionada]
         st.code(definicao["sql"].strip(), language="sql")
-        resultado = consultar(definicao["sql"])
-        if resultado.empty:
-            st.info("A consulta não retornou resultados.")
-        else:
-            for coluna in definicao["colunas_numericas"]:
-                resultado[coluna] = pd.to_numeric(
-                    resultado[coluna], errors="coerce"
-                )
-            st.dataframe(resultado, width="stretch", hide_index=True)
-            categoricas = resultado.select_dtypes(
-                exclude="number"
-            ).columns.tolist()
-            numericas = resultado.select_dtypes(
-                include="number"
-            ).columns.tolist()
-            if not categoricas or not numericas:
-                st.info(
-                    "O resultado não contém colunas suficientes para gerar "
-                    "um gráfico."
-                )
-            else:
-                coluna_x = st.selectbox(
-                    "Categoria do gráfico", categoricas,
-                    key=f"grafico_consulta_x_{consulta_selecionada}",
-                )
-                coluna_y = st.selectbox(
-                    "Indicador do gráfico", numericas,
-                    key=f"grafico_consulta_y_{consulta_selecionada}",
-                )
-                if definicao["tipo_grafico"] == "line":
-                    figura = px.line(
-                        resultado, x=coluna_x, y=coluna_y, markers=True,
-                        labels={coluna_x: coluna_x, coluna_y: coluna_y},
-                    )
-                else:
-                    figura = px.bar(
-                        resultado, x=coluna_x, y=coluna_y, color=(
-                            "raca_cor" if "raca_cor" in resultado.columns else None
-                        ),
-                        labels={coluna_x: coluna_x, coluna_y: coluna_y},
-                    )
-                figura.update_layout(
-                    template="plotly_white",
-                    margin={"l": 10, "r": 10, "t": 30, "b": 10},
-                )
-                st.plotly_chart(figura, width="stretch")
+        _renderizar_resultado_consulta(
+            consultar, definicao, f"inicial_{consulta_selecionada}",
+        )
+
+    with avancadas_tab:
+        st.caption(
+            "Quatro novas consultas: anti join, full outer join e duas com "
+            "subconsultas. Resultados em tabela e, quando aplicável, gráfico."
+        )
+        consulta_selecionada = st.selectbox(
+            "Consulta avançada",
+            list(CONSULTAS_AVANCADAS),
+            key="consulta_avancada_sql_equidados",
+        )
+        definicao = CONSULTAS_AVANCADAS[consulta_selecionada]
+        st.code(definicao["sql"].strip(), language="sql")
+        _renderizar_resultado_consulta(
+            consultar, definicao, f"avancada_{consulta_selecionada}",
+        )
 
     with tabelas_tab:
         st.caption(
