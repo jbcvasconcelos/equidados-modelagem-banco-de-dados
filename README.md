@@ -176,6 +176,15 @@ A interface EquiDados reúne o dashboard territorial e o assistente em uma únic
 - **Dados e consultas SQL**: quatro consultas SQL explícitas (incluindo junções entre tabelas), visualização dos resultados em tabelas e gráficos e consulta paginada das tabelas do CNES, Censo, dados simulados e visões analíticas. A interface também permite inserir, alterar e excluir nas tabelas fictícias `mock_pec_atendimentos` e `mock_populacao_negra_distrito`; as tabelas reais do CNES e do Censo ficam somente para consulta.
 - **Etapa 04 — Consultas Avançadas, Visões e Índices**: script [Etapa_04_Consultas_Avancadas.sql](./Etapa_04_Consultas_Avancadas.sql) com dois índices compostos usados pelos filtros recentes por equipe/data e data/distrito; quatro consultas novas (anti join, full outer join e duas com subconsultas); e duas visões de domínio, cada uma relacionando pelo menos três conjuntos por JOIN. As visões consolidam indicadores territoriais e completude por equipe; dados `mock_` e referências distritais continuam identificados como simulados. A interface também disponibiliza as quatro consultas avançadas e permite consultar as visões em **Dados e consultas SQL → Consultas e gráficos**.
 
+### Entregáveis da Etapa 04 e modelos atualizados
+
+- [Modelo conceitual — última versão (PDF)](./Modelo_Conceitual_EquiDados_Ultima_Versao.pdf)
+- [Esquema relacional escrito — última versão (PDF)](./Esquema_Relacional_EquiDados_Ultima_Versao.pdf)
+- [Scripts de criação e inserção do banco (PDF)](./Scripts_Criacao_e_Insercao_BD_EquiDados.pdf)
+- [Dois índices: definição, justificativa e uso nas consultas (PDF)](./Indices_Etapa_04_EquiDados.pdf)
+- [Quatro consultas avançadas (PDF)](./Consultas_Avancadas_Etapa_04_EquiDados.pdf)
+- [Duas visões analíticas e justificativas semânticas (PDF)](./Visoes_Analiticas_Etapa_04_EquiDados.pdf)
+
 As telas de Machine Learning e recomendações territoriais do wireframe não estão incluídas: o projeto ainda não implementa um modelo de previsão nem uma lógica de recomendação. Os dados de atendimentos e a referência de população negra por distrito continuam identificados como simulados.
 
 Arquivo principal: `src/dashboard/app_dashboard.py`. O GeoPandas consta em `requirements.txt` e é utilizado para validar coordenadas e associar espacialmente unidades aos distritos.
